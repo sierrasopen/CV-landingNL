@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sierras Open Golf Tour 2026 — Reglamento</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --verde: #0D3B2D;
+    --verde2: #1A4A2E;
+    --dorado: #B8960C;
+    --dorado2: #D4AF37;
+    --crema: #F5F0E8;
+    --linea: rgba(184,150,12,0.3);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @media print {
+    @page { size: A4; margin: 0; }
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+
+  body {
+    background: var(--verde);
+    font-family: 'Raleway', sans-serif;
+    color: var(--crema);
+    min-height: 100vh;
+  }
+
+  .wrapper { max-width: 780px; margin: 0 auto; padding: 0 0 60px; }
+
+  .header {
+    position: relative;
+    background: var(--verde);
+    padding: 60px 50px 50px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--linea);
+  }
+  .header::before {
+    content: ''; position: absolute;
+    top: -80px; right: -80px;
+    width: 320px; height: 320px;
+    border: 1px solid rgba(184,150,12,0.15); border-radius: 50%;
+  }
+  .header::after {
+    content: ''; position: absolute;
+    top: -40px; right: -40px;
+    width: 200px; height: 200px;
+    border: 1px solid rgba(184,150,12,0.1); border-radius: 50%;
+  }
+
+  .aniversario {
+    font-family: 'Raleway', sans-serif;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.4em;
+    color: var(--dorado); text-transform: uppercase;
+    margin-bottom: 16px; display: flex; align-items: center; gap: 12px;
+  }
+  .aniversario::before {
+    content: ''; display: inline-block;
+    width: 30px; height: 1px; background: var(--dorado);
+  }
+
+  .titulo-principal {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 58px; font-weight: 400; line-height: 1;
+    color: var(--crema); letter-spacing: 0.01em;
+  }
+  .titulo-principal strong {
+    font-weight: 700; color: var(--dorado2);
+    display: block; font-style: italic;
+  }
+
+  .anio {
+    font-family: 'Raleway', sans-serif; font-size: 120px; font-weight: 700;
+    color: rgba(245,240,232,0.06); position: absolute;
+    bottom: -20px; right: 40px; line-height: 1;
+    letter-spacing: -0.04em; pointer-events: none; user-select: none;
+  }
+
+  .seccion { padding: 40px 50px; border-bottom: 1px solid var(--linea); }
+
+  .seccion-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 10px; font-weight: 600; letter-spacing: 0.45em;
+    color: var(--dorado); text-transform: uppercase;
+    margin-bottom: 20px; display: flex; align-items: center; gap: 10px;
+  }
+  .seccion-label::after { content: ''; flex: 1; height: 1px; background: var(--linea); }
+
+  .sedes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .sede-card {
+    background: rgba(245,240,232,0.05); border: 1px solid rgba(245,240,232,0.1);
+    padding: 20px 24px; position: relative; overflow: hidden;
+  }
+  .sede-card::before {
+    content: ''; position: absolute; top: 0; left: 0;
+    width: 3px; height: 100%; background: var(--dorado);
+  }
+  .sede-nombre { font-family: 'Libre Baskerville', serif; font-size: 20px; font-weight: 700; color: var(--crema); margin-bottom: 4px; }
+  .sede-lugar { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; color: rgba(245,240,232,0.5); text-transform: uppercase; }
+
+  .cronograma-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px; }
+  .crono-club { font-family: 'Raleway', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.25em; color: var(--dorado); text-transform: uppercase; margin-bottom: 12px; }
+  .fechas-lista { display: flex; flex-wrap: wrap; gap: 8px; }
+  .fecha-chip { background: rgba(245,240,232,0.08); border: 1px solid rgba(245,240,232,0.12); padding: 5px 12px; font-family: 'Raleway', sans-serif; font-size: 14px; font-weight: 500; color: var(--crema); letter-spacing: 0.05em; }
+
+  .fecha-final-box { background: var(--dorado); padding: 20px 24px; display: flex; align-items: center; gap: 20px; }
+  .fecha-final-fecha { font-family: 'Libre Baskerville', serif; font-size: 34px; font-weight: 700; color: var(--verde); line-height: 1; white-space: nowrap; }
+  .fecha-final-detalle { font-family: 'Raleway', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.2em; color: var(--verde); text-transform: uppercase; line-height: 1.6; }
+
+  .juego-row { display: flex; align-items: center; gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(245,240,232,0.07); }
+  .juego-row:last-child { border-bottom: none; }
+  .juego-num { font-family: 'Libre Baskerville', serif; font-size: 28px; font-weight: 400; font-style: italic; color: var(--dorado); width: 36px; text-align: right; flex-shrink: 0; }
+  .juego-texto { font-size: 18px; font-weight: 500; color: var(--crema); letter-spacing: 0.02em; }
+  .juego-sub { font-size: 11px; color: rgba(245,240,232,0.5); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 2px; }
+
+  .cats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .cat-box { border: 1px solid rgba(184,150,12,0.3); padding: 20px 12px; text-align: center; }
+  .cat-hcp { font-family: 'Libre Baskerville', serif; font-size: 28px; font-weight: 700; color: var(--dorado2); line-height: 1; }
+
+  .premios-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+  .premio-card { padding: 20px; background: rgba(245,240,232,0.04); border: 1px solid rgba(245,240,232,0.1); text-align: center; }
+  .premio-pos { font-family: 'Libre Baskerville', serif; font-size: 46px; font-weight: 700; line-height: 1; margin-bottom: 8px; }
+  .premio-pos.gold { color: var(--dorado2); }
+  .premio-pos.silver { color: rgba(245,240,232,0.5); }
+  .premio-pos.especial { color: #7EC8A4; font-size: 34px; }
+  .premio-desc { font-size: 12px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,240,232,0.7); line-height: 1.5; }
+
+  .puntos-tabla { display: flex; border: 1px solid var(--linea); overflow: hidden; }
+  .punto-col { flex: 1; text-align: center; padding: 20px 8px; border-right: 1px solid var(--linea); }
+  .punto-col:last-child { border-right: none; }
+  .punto-col.top { background: rgba(184,150,12,0.12); }
+  .punto-pos { font-family: 'Raleway', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.3em; color: var(--dorado); text-transform: uppercase; margin-bottom: 8px; }
+  .punto-num { font-family: 'Libre Baskerville', serif; font-size: 42px; font-weight: 700; color: var(--crema); line-height: 1; }
+  .punto-pts { font-family: 'Raleway', sans-serif; font-size: 10px; color: rgba(245,240,232,0.4); letter-spacing: 0.2em; margin-top: 4px; text-transform: uppercase; }
+
+  .desempate-box { background: rgba(245,240,232,0.04); border-left: 3px solid var(--dorado); padding: 20px 24px; font-family: 'Libre Baskerville', serif; font-size: 17px; font-style: italic; color: rgba(245,240,232,0.85); line-height: 1.7; }
+
+  .comite-lista { display: flex; flex-wrap: wrap; gap: 12px; }
+  .comite-nombre { background: rgba(245,240,232,0.06); border: 1px solid rgba(245,240,232,0.12); padding: 10px 20px; font-family: 'Libre Baskerville', serif; font-size: 18px; font-weight: 400; color: var(--crema); letter-spacing: 0.03em; }
+
+  .premio-final-header { background: linear-gradient(135deg, var(--dorado) 0%, #8B6914 100%); padding: 30px 50px; }
+  .pf-titulo { font-family: 'Libre Baskerville', serif; font-size: 26px; font-weight: 700; font-style: italic; color: var(--verde); line-height: 1.2; }
+  .pf-sub { font-family: 'Raleway', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(13,59,45,0.7); margin-top: 6px; }
+
+  .premio-final-body { padding: 30px 50px; border-bottom: 1px solid var(--linea); }
+  .pf-items { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
+  .pf-item { display: flex; align-items: flex-start; gap: 10px; font-family: 'Raleway', sans-serif; font-size: 15px; color: rgba(245,240,232,0.85); line-height: 1.5; }
+  .pf-dot { width: 5px; height: 5px; background: var(--dorado); border-radius: 50%; flex-shrink: 0; margin-top: 6px; }
+  .pf-nota { font-family: 'Libre Baskerville', serif; font-size: 13px; font-style: italic; color: rgba(245,240,232,0.45); border-top: 1px solid rgba(245,240,232,0.08); padding-top: 14px; margin-top: 4px; line-height: 1.7; }
+
+  .p-texto { font-family: 'Raleway', sans-serif; font-size: 16px; color: rgba(245,240,232,0.75); line-height: 1.7; margin-bottom: 12px; }
+
+  .footer { padding: 30px 50px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--linea); }
+  .footer-brand { font-family: 'Libre Baskerville', serif; font-size: 16px; font-weight: 700; font-style: italic; color: var(--dorado); letter-spacing: 0.03em; }
+  .footer-datos { font-family: 'Raleway', sans-serif; font-size: 12px; color: rgba(245,240,232,0.4); letter-spacing: 0.1em; text-align: right; line-height: 1.8; }
+
+  /* Fuentes grandes desde cronograma */
+  .grande .seccion-label { font-size: 13px; }
+  .grande .crono-club { font-size: 15px; }
+  .grande .fecha-chip { font-size: 17px; padding: 7px 16px; }
+  .grande .fecha-final-fecha { font-size: 40px; }
+  .grande .fecha-final-detalle { font-size: 14px; }
+  .grande .juego-texto { font-size: 22px; }
+  .grande .juego-sub { font-size: 14px; }
+  .grande .cat-hcp { font-size: 34px; }
+  .grande .p-texto { font-size: 19px; }
+  .grande .premio-pos { font-size: 56px; }
+  .grande .premio-pos.especial { font-size: 42px; }
+  .grande .premio-desc { font-size: 15px; }
+  .grande .punto-num { font-size: 50px; }
+  .grande .desempate-box { font-size: 20px; }
+  .grande .comite-nombre { font-size: 22px; }
+  .grande .pf-titulo { font-size: 30px; }
+  .grande .pf-item { font-size: 18px; }
+
+  @media (max-width: 600px) {
+    .header { padding: 40px 24px; }
+    .titulo-principal { font-size: 40px; }
+    .seccion { padding: 30px 24px; }
+    .sedes-grid, .cats-grid, .cronograma-grid, .premios-cols, .pf-items { grid-template-columns: 1fr; }
+    .puntos-tabla { flex-wrap: wrap; }
+    .punto-col { min-width: 50%; }
+    .premio-final-header, .premio-final-body { padding: 24px; }
+    .footer { flex-direction: column; gap: 16px; text-align: center; padding: 24px; }
+    .footer-datos { text-align: center; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <div class="header">
+    <div class="aniversario">20° Aniversario</div>
+    <div class="titulo-principal">
+      Sierras Open
+      <strong>Golf Tour</strong>
+    </div>
+    <div class="anio">2026</div>
+  </div>
+
+  <div class="seccion">
+    <div class="seccion-label">Sedes</div>
+    <div class="sedes-grid">
+      <div class="sede-card">
+        <div class="sede-nombre">Valle Golf Club</div>
+        <div class="sede-lugar">Malagueño · Córdoba</div>
+      </div>
+      <div class="sede-card">
+        <div class="sede-nombre">El Potrerillo de Larreta</div>
+        <div class="sede-lugar">Alta Gracia · Córdoba</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="seccion grande">
+    <div class="seccion-label">Cronograma 2026</div>
+    <div class="cronograma-grid">
+      <div>
+        <div class="crono-club">Valle Golf Club</div>
+        <div class="fechas-lista">
+          <span class="fecha-chip">15/04</span><span class="fecha-chip">13/05</span>
+          <span class="fecha-chip">17/06</span><span class="fecha-chip">15/07</span>
+          <span class="fecha-chip">19/08</span><span class="fecha-chip">02/09</span>
+          <span class="fecha-chip">11/11</span>
+        </div>
+      </div>
+      <div>
+        <div class="crono-club">El Potrerillo de Larreta</div>
+        <div class="fechas-lista">
+          <span class="fecha-chip">22/04</span><span class="fecha-chip">20/05</span>
+          <span class="fecha-chip">24/06</span><span class="fecha-chip">22/07</span>
+          <span class="fecha-chip">26/08</span><span class="fecha-chip">14/10</span>
+          <span class="fecha-chip">25/11</span>
+        </div>
+      </div>
+    </div>
+    <div class="fecha-final-box">
+      <div class="fecha-final-fecha">09/12</div>
+      <div class="fecha-final-detalle">FECHA FINAL · Valle Golf Club<br>Entrega de Premios · Lunch · Sorteos</div>
+    </div>
+  </div>
+
+  <div class="seccion grande">
+    <div class="seccion-label">Sistema de Juego</div>
+    <div class="juego-row">
+      <div class="juego-num">18</div>
+      <div>
+        <div class="juego-texto">Medal Play — 18 hoyos</div>
+        <div class="juego-sub">Modalidad individual</div>
+      </div>
+    </div>
+    <div class="juego-row">
+      <div class="juego-num">♂♀</div>
+      <div>
+        <div class="juego-texto">Categorías mixtas</div>
+        <div class="juego-sub">Damas y caballeros con handicap</div>
+      </div>
+    </div>
+    <div style="margin-top:24px">
+      <div class="seccion-label" style="margin-bottom:16px">Categorías por Handicap</div>
+      <div class="cats-grid">
+        <div class="cat-box"><div class="cat-hcp">0–9</div></div>
+        <div class="cat-box"><div class="cat-hcp">10–16</div></div>
+        <div class="cat-box"><div class="cat-hcp">17–24</div></div>
+        <div class="cat-box"><div class="cat-hcp">25+</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="seccion grande">
+    <div class="seccion-label">Premios por Fecha</div>
+    <p class="p-texto">El torneo entregará premios para 1° y 2° puesto de cada categoría en cada fecha, como también Approach, Long Drive y Mejor Gross, consistentes en regalos de los patrocinadores.</p>
+    <div class="premios-cols">
+      <div class="premio-card"><div class="premio-pos gold">1°</div><div class="premio-desc">Puesto<br>por categoría</div></div>
+      <div class="premio-card"><div class="premio-pos silver">2°</div><div class="premio-desc">Puesto<br>por categoría</div></div>
+      <div class="premio-card"><div class="premio-pos especial">★</div><div class="premio-desc">Approach<br>Long Drive<br>Mejor Gross</div></div>
+    </div>
+  </div>
+
+  <div class="seccion grande">
+    <div class="seccion-label">Ranking Anual — Sistema de Puntos</div>
+    <div class="puntos-tabla">
+      <div class="punto-col top"><div class="punto-pos">1°</div><div class="punto-num">10</div><div class="punto-pts">puntos</div></div>
+      <div class="punto-col"><div class="punto-pos">2°</div><div class="punto-num">6</div><div class="punto-pts">puntos</div></div>
+      <div class="punto-col"><div class="punto-pos">3°</div><div class="punto-num">4</div><div class="punto-pts">puntos</div></div>
+      <div class="punto-col"><div class="punto-pos">4°</div><div class="punto-num">3</div><div class="punto-pts">puntos</div></div>
+      <div class="punto-col"><div class="punto-pos">5°</div><div class="punto-num">2</div><div class="punto-pts">puntos</div></div>
+    </div>
+    <p class="p-texto" style="margin-top:16px">Los puntos se acumulan en una tabla general. Ganará el torneo quien sume más puntos al cabo de las 15 fechas.</p>
+  </div>
+
+  <div class="seccion grande">
+    <div class="seccion-label">Desempate</div>
+    <div class="desempate-box">En caso de empate en el ranking anual, se tomará en cuenta la sumatoria de los netos obtenidos en cada fecha.</div>
+  </div>
+
+  <div class="seccion grande">
+    <div class="seccion-label">Comité de Torneo</div>
+    <p class="p-texto">Cualquier controversia será resuelta por el Comité de Torneo, cuya decisión será definitiva e inapelable.</p>
+    <div class="comite-lista">
+      <div class="comite-nombre">Agustín Costa</div>
+      <div class="comite-nombre">Damián Lucero</div>
+      <div class="comite-nombre">Carlos Farías</div>
+      <div class="comite-nombre">Natalia Luque</div>
+    </div>
+  </div>
+
+  <div style="border-bottom:1px solid var(--linea)">
+    <div class="premio-final-header grande">
+      <div class="pf-titulo">Premio Final — Ganador del Torneo</div>
+      <div class="pf-sub">Punta del Este, Uruguay</div>
+    </div>
+    <div class="premio-final-body grande">
+      <div class="pf-items">
+        <div class="pf-item"><div class="pf-dot"></div>Estadía 3 noches en Punta del Este</div>
+        <div class="pf-item"><div class="pf-dot"></div>Alojamiento para 2 personas — Solanas / Dpto. equipado, Sector Green Park</div>
+        <div class="pf-item"><div class="pf-dot"></div>Desayuno incluido</div>
+        <div class="pf-item"><div class="pf-dot"></div>Acceso a Gym, piscina e instalaciones</div>
+        <div class="pf-item"><div class="pf-dot"></div>Pulsera Laguna Cristal Beach</div>
+        <div class="pf-item"><div class="pf-dot"></div>3 días de Green Fee</div>
+        <div class="pf-item"><div class="pf-dot"></div>Cena de bienvenida (1° día)</div>
+        <div class="pf-item"><div class="pf-dot"></div>Lunch (2° y 3° día)</div>
+        <div class="pf-item"><div class="pf-dot"></div>Participación en la Apertura Sierras Open — Marzo 2027</div>
+      </div>
+      <div class="pf-nota">Los ítems de cena, lunch y green fee son exclusivos para el ganador. El acompañante tiene incluido solo alojamiento con desayuno.</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-brand">Sierras Open Golf Tour 2026</div>
+    <div class="footer-datos">@golfsierrasopen<br>+54 351 516 5220 · Córdoba, Argentina</div>
+  </div>
+
+</div>
+</body>
+</html>
