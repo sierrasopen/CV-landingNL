@@ -7,20 +7,38 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 <style>
   :root {
-    --verde: #19644d;
-    --verde-oscuro: #0d3b2d;
+    --verde: #1a4d52;
+    --verde-oscuro: #0d2f33;
     --coral: #fa5152;
     --gris: #f2f2f0;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @keyframes flotar {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-18px) scale(1.03); }
+  }
+  @keyframes flotar2 {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(14px) scale(0.97); }
+  }
+  @keyframes rotar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  @keyframes pulsar {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.15); }
+  }
+
   body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #c8ddd6;
+    background-color: #b8d0cc;
     background-image:
-      radial-gradient(ellipse 70% 60% at 15% 20%, rgba(255,255,255,0.45) 0%, transparent 55%),
-      radial-gradient(ellipse 60% 50% at 85% 80%, rgba(13,59,45,0.18) 0%, transparent 55%),
-      radial-gradient(ellipse 50% 40% at 80% 10%, rgba(250,81,82,0.08) 0%, transparent 50%),
-      radial-gradient(ellipse 40% 60% at 5% 90%, rgba(25,100,77,0.2) 0%, transparent 50%);
+      radial-gradient(ellipse 70% 60% at 15% 20%, rgba(255,255,255,0.35) 0%, transparent 55%),
+      radial-gradient(ellipse 60% 50% at 85% 80%, rgba(13,47,51,0.25) 0%, transparent 55%),
+      radial-gradient(ellipse 50% 40% at 80% 10%, rgba(250,81,82,0.07) 0%, transparent 50%),
+      radial-gradient(ellipse 40% 60% at 5% 90%, rgba(26,77,82,0.22) 0%, transparent 50%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -150,23 +168,29 @@
 
 <!-- formas decorativas de fondo -->
 <svg style="position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;" viewBox="0 0 390 844" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-  <!-- círculo grande esquina superior derecha -->
-  <circle cx="370" cy="-20" r="180" fill="none" stroke="rgba(25,100,77,0.18)" stroke-width="1"/>
-  <circle cx="370" cy="-20" r="130" fill="none" stroke="rgba(25,100,77,0.12)" stroke-width="1"/>
-  <circle cx="370" cy="-20" r="80" fill="rgba(25,100,77,0.07)" stroke="rgba(25,100,77,0.15)" stroke-width="1"/>
-  <!-- círculo grande esquina inferior izquierda -->
-  <circle cx="-30" cy="870" r="200" fill="none" stroke="rgba(13,59,45,0.15)" stroke-width="1"/>
-  <circle cx="-30" cy="870" r="140" fill="rgba(13,59,45,0.05)" stroke="rgba(13,59,45,0.12)" stroke-width="1"/>
-  <!-- acento coral pequeño -->
-  <circle cx="340" cy="750" r="50" fill="rgba(250,81,82,0.07)" stroke="rgba(250,81,82,0.12)" stroke-width="1"/>
-  <circle cx="340" cy="750" r="25" fill="rgba(250,81,82,0.05)"/>
-  <!-- línea diagonal sutil -->
-  <line x1="0" y1="300" x2="160" y2="500" stroke="rgba(25,100,77,0.1)" stroke-width="1" stroke-dasharray="4,8"/>
-  <line x1="390" y1="200" x2="230" y2="450" stroke="rgba(25,100,77,0.08)" stroke-width="1" stroke-dasharray="4,8"/>
-  <!-- punto decorativo -->
-  <circle cx="55" cy="140" r="4" fill="rgba(250,81,82,0.25)"/>
-  <circle cx="335" cy="400" r="3" fill="rgba(25,100,77,0.3)"/>
-  <circle cx="20" cy="600" r="3" fill="rgba(250,81,82,0.15)"/>
+  <!-- grupo superior derecha — flota hacia arriba -->
+  <g style="transform-origin:370px 0px; animation: flotar 7s ease-in-out infinite;">
+    <circle cx="370" cy="-20" r="180" fill="none" stroke="rgba(26,77,82,0.2)" stroke-width="1"/>
+    <circle cx="370" cy="-20" r="130" fill="none" stroke="rgba(26,77,82,0.14)" stroke-width="1"/>
+    <circle cx="370" cy="-20" r="80" fill="rgba(26,77,82,0.08)" stroke="rgba(26,77,82,0.18)" stroke-width="1"/>
+  </g>
+  <!-- grupo inferior izquierda — flota hacia abajo -->
+  <g style="transform-origin:-30px 870px; animation: flotar2 9s ease-in-out infinite;">
+    <circle cx="-30" cy="870" r="200" fill="none" stroke="rgba(13,47,51,0.18)" stroke-width="1"/>
+    <circle cx="-30" cy="870" r="140" fill="rgba(13,47,51,0.07)" stroke="rgba(13,47,51,0.14)" stroke-width="1"/>
+  </g>
+  <!-- acento coral — pulsa -->
+  <g style="transform-origin:340px 750px; animation: pulsar 5s ease-in-out infinite;">
+    <circle cx="340" cy="750" r="50" fill="rgba(250,81,82,0.08)" stroke="rgba(250,81,82,0.15)" stroke-width="1"/>
+    <circle cx="340" cy="750" r="26" fill="rgba(250,81,82,0.06)"/>
+  </g>
+  <!-- líneas diagonales -->
+  <line x1="0" y1="300" x2="160" y2="500" stroke="rgba(26,77,82,0.12)" stroke-width="1" stroke-dasharray="4,8"/>
+  <line x1="390" y1="200" x2="230" y2="450" stroke="rgba(26,77,82,0.09)" stroke-width="1" stroke-dasharray="4,8"/>
+  <!-- puntos — pulsan -->
+  <circle cx="55" cy="140" r="4" fill="rgba(250,81,82,0.3)" style="animation: pulsar 4s ease-in-out infinite;"/>
+  <circle cx="335" cy="400" r="3" fill="rgba(26,77,82,0.35)" style="animation: pulsar 6s ease-in-out infinite 1s;"/>
+  <circle cx="20" cy="600" r="3" fill="rgba(250,81,82,0.2)" style="animation: pulsar 5s ease-in-out infinite 2s;"/>
 </svg>
 
 <div class="wrap" style="position:relative;z-index:1;">
