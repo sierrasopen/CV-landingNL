@@ -3,153 +3,220 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NLZ Studio · Links</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+<title>Natalia Luque · Links</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 <style>
   :root {
     --verde: #19644d;
     --verde-oscuro: #0d3b2d;
     --coral: #fa5152;
-    --blanco: #ffffff;
-    --gris: #f4f4f4;
+    --gris: #f2f2f0;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: 'Montserrat', sans-serif;
     background: var(--gris);
-    color: #333;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 32px 24px;
+    padding: 40px 20px;
   }
-  .card {
-    width: 100%;
-    max-width: 420px;
-  }
+  .wrap { width: 100%; max-width: 400px; }
+
+  /* PERFIL */
   .perfil {
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 36px;
   }
-  .perfil-logo {
-    font-family: 'Montserrat', sans-serif;
+  .logo {
     font-weight: 900;
-    font-size: 36px;
+    font-size: 40px;
     color: var(--verde);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
     line-height: 1;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
-  .perfil-logo span { color: var(--coral); }
-  .perfil-nombre {
+  .logo em { color: var(--coral); font-style: normal; }
+  .nombre {
     font-size: 13px;
-    font-weight: 500;
-    color: #555;
-    letter-spacing: 0.05em;
+    font-weight: 600;
+    color: #2a2a2a;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
   }
-  .perfil-sub {
-    font-size: 11px;
-    font-weight: 300;
-    color: #999;
-    margin-top: 4px;
-  }
-  .acento {
-    width: 40px;
-    height: 3px;
-    background: linear-gradient(90deg, var(--coral), #ff8c8c);
-    border-radius: 2px;
-    margin: 12px auto 0;
-  }
-  .links {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-  .link-btn {
-    display: block;
-    text-decoration: none;
-    background: white;
-    border-radius: 14px;
-    padding: 20px 24px;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
-    transition: transform 0.18s, box-shadow 0.18s;
-    border: 1.5px solid transparent;
-    position: relative;
-    overflow: hidden;
-  }
-  .link-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba(0,0,0,0.11);
-    border-color: var(--verde);
-  }
-  .link-btn::before {
-    content: '';
-    position: absolute;
-    left: 0; top: 0; bottom: 0;
-    width: 4px;
-    background: linear-gradient(180deg, var(--verde), var(--verde-oscuro));
-    border-radius: 14px 0 0 14px;
-  }
-  .link-btn.coral::before {
-    background: linear-gradient(180deg, var(--coral), #d93f40);
-  }
-  .link-icon {
-    font-size: 22px;
-    margin-bottom: 6px;
-    display: block;
-  }
-  .link-titulo {
-    font-size: 14px;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 4px;
-    letter-spacing: 0.01em;
-  }
-  .link-desc {
+  .rol {
     font-size: 11px;
     font-weight: 300;
     color: #888;
+    letter-spacing: 0.04em;
+  }
+  .linea {
+    width: 32px;
+    height: 2px;
+    background: var(--coral);
+    border-radius: 2px;
+    margin: 14px auto 0;
+  }
+
+  /* CARDS */
+  .links { display: flex; flex-direction: column; gap: 12px; }
+
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 18px 22px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .item:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+    transform: translateY(-1px);
+  }
+  .item-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .item-icon.verde { background: #e8f2ee; }
+  .item-icon.coral { background: #fdeaea; }
+  .item-icon.dark  { background: #1a1a1a; }
+  .item-icon.gold  { background: #fef6e4; }
+  .item-text { flex: 1; }
+  .item-titulo {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 3px;
+    letter-spacing: 0.01em;
+  }
+  .item-desc {
+    font-size: 10.5px;
+    font-weight: 400;
+    color: #999;
     line-height: 1.4;
   }
+  .item-arrow {
+    flex-shrink: 0;
+    color: #ccc;
+  }
+
+  /* BADGE GRATIS */
+  .badge {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background: var(--coral);
+    color: white;
+    padding: 3px 8px;
+    border-radius: 20px;
+  }
+
   .footer {
     text-align: center;
     margin-top: 32px;
-    font-size: 10px;
+    font-size: 9.5px;
     color: #bbb;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
   }
 </style>
 </head>
 <body>
-<div class="card">
+<div class="wrap">
+
   <div class="perfil">
-    <div class="perfil-logo">NL<span>Z</span></div>
-    <div class="perfil-nombre">Natalia Luque</div>
-    <div class="perfil-sub">Estrategia · Marketing · Inmobiliaria</div>
-    <div class="acento"></div>
+    <div class="logo">NL<em>Z</em></div>
+    <div class="nombre">Natalia Luque</div>
+    <div class="rol">Estrategia · Marketing · Inmobiliaria · CPI 6518</div>
+    <div class="linea"></div>
   </div>
 
   <div class="links">
-    <a class="link-btn" href="/prediagnostico">
-      <span class="link-icon">🎯</span>
-      <div class="link-titulo">Pre-diagnóstico de tu negocio</div>
-      <div class="link-desc">3 minutos para darte una propuesta real de marketing y comunicación</div>
+
+    <!-- 1. Sitio web -->
+    <a class="item" href="/">
+      <div class="item-icon verde">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#19644d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+      </div>
+      <div class="item-text">
+        <div class="item-titulo">Sitio web NLZ Studio</div>
+        <div class="item-desc">Servicios, propuesta y cómo trabajamos juntas</div>
+      </div>
+      <div class="item-arrow">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
     </a>
 
-    <a class="link-btn coral" href="/inmo">
-      <span class="link-icon">🏠</span>
-      <div class="link-titulo">Consulta Inmobiliaria</div>
-      <div class="link-desc">Comprar · Vender · Alquilar · Tasaciones — Corredora Mat. CPI 6518</div>
+    <!-- 2. Consulta Inmobiliaria -->
+    <a class="item" href="/inmo">
+      <div class="item-icon coral">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fa5152" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+      </div>
+      <div class="item-text">
+        <div class="item-titulo">Consulta Inmobiliaria</div>
+        <div class="item-desc">Comprar · Vender · Alquilar · Tasaciones</div>
+      </div>
+      <div class="item-arrow">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
     </a>
 
-    <a class="link-btn" href="/">
-      <span class="link-icon">✦</span>
-      <div class="link-titulo">Sitio web NLZ Studio</div>
-      <div class="link-desc">Servicios, propuesta y cómo trabajamos juntas</div>
+    <!-- 3. Pre-diagnóstico -->
+    <a class="item" href="/prediagnostico">
+      <div class="item-icon verde">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#19644d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+        </svg>
+      </div>
+      <div class="item-text">
+        <div class="item-titulo">Pre-diagnóstico de Marketing</div>
+        <div class="item-desc">3 minutos · propuesta real para tu negocio</div>
+      </div>
+      <div class="item-arrow">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
     </a>
+
+    <!-- 4. Ebook -->
+    <a class="item" href="#" id="ebook-link">
+      <div class="badge">Gratis</div>
+      <div class="item-icon gold">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9922a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+        </svg>
+      </div>
+      <div class="item-text">
+        <div class="item-titulo">Descargá el Ebook</div>
+        <div class="item-desc">Guía gratuita · descarga inmediata</div>
+      </div>
+      <div class="item-arrow">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+    </a>
+
   </div>
 
   <div class="footer">natalialuque.vercel.app</div>
