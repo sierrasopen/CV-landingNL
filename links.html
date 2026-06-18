@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NLZ Studio · Links</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --verde: #19644d;
+    --verde-oscuro: #0d3b2d;
+    --coral: #fa5152;
+    --blanco: #ffffff;
+    --gris: #f4f4f4;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--gris);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 24px;
+  }
+  .card {
+    width: 100%;
+    max-width: 420px;
+  }
+  .perfil {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .perfil-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 36px;
+    color: var(--verde);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .perfil-logo span { color: var(--coral); }
+  .perfil-nombre {
+    font-size: 13px;
+    font-weight: 500;
+    color: #555;
+    letter-spacing: 0.05em;
+  }
+  .perfil-sub {
+    font-size: 11px;
+    font-weight: 300;
+    color: #999;
+    margin-top: 4px;
+  }
+  .acento {
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--coral), #ff8c8c);
+    border-radius: 2px;
+    margin: 12px auto 0;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .link-btn {
+    display: block;
+    text-decoration: none;
+    background: white;
+    border-radius: 14px;
+    padding: 20px 24px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    transition: transform 0.18s, box-shadow 0.18s;
+    border: 1.5px solid transparent;
+    position: relative;
+    overflow: hidden;
+  }
+  .link-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.11);
+    border-color: var(--verde);
+  }
+  .link-btn::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, var(--verde), var(--verde-oscuro));
+    border-radius: 14px 0 0 14px;
+  }
+  .link-btn.coral::before {
+    background: linear-gradient(180deg, var(--coral), #d93f40);
+  }
+  .link-icon {
+    font-size: 22px;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .link-titulo {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+    letter-spacing: 0.01em;
+  }
+  .link-desc {
+    font-size: 11px;
+    font-weight: 300;
+    color: #888;
+    line-height: 1.4;
+  }
+  .footer {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 10px;
+    color: #bbb;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="perfil">
+    <div class="perfil-logo">NL<span>Z</span></div>
+    <div class="perfil-nombre">Natalia Luque</div>
+    <div class="perfil-sub">Estrategia · Marketing · Inmobiliaria</div>
+    <div class="acento"></div>
+  </div>
+
+  <div class="links">
+    <a class="link-btn" href="/prediagnostico">
+      <span class="link-icon">🎯</span>
+      <div class="link-titulo">Pre-diagnóstico de tu negocio</div>
+      <div class="link-desc">3 minutos para darte una propuesta real de marketing y comunicación</div>
+    </a>
+
+    <a class="link-btn coral" href="/inmo">
+      <span class="link-icon">🏠</span>
+      <div class="link-titulo">Consulta Inmobiliaria</div>
+      <div class="link-desc">Comprar · Vender · Alquilar · Tasaciones — Corredora Mat. CPI 6518</div>
+    </a>
+
+    <a class="link-btn" href="/">
+      <span class="link-icon">✦</span>
+      <div class="link-titulo">Sitio web NLZ Studio</div>
+      <div class="link-desc">Servicios, propuesta y cómo trabajamos juntas</div>
+    </a>
+  </div>
+
+  <div class="footer">natalialuque.vercel.app</div>
+</div>
+</body>
+</html>
