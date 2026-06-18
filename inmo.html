@@ -297,6 +297,8 @@
 
     </div>
 
+    <div id="paso2" style="overflow:hidden; max-height:0; opacity:0; transition: max-height 0.5s ease, opacity 0.4s ease 0.1s;">
+
     <div class="sep">
       <div class="sep-line"></div>
       <div class="sep-mark"></div>
@@ -310,18 +312,18 @@
 
     <div class="campo-row">
       <div class="campo">
-        <label class="campo-label">Teléfono</label>
+        <label class="campo-label">Teléfono / WhatsApp</label>
         <input type="tel" id="telefono" placeholder="351 000 0000">
       </div>
       <div class="campo">
-        <label class="campo-label">Zona</label>
-        <input type="text" id="zona" placeholder="Barrio / ciudad">
+        <label class="campo-label">Zona o barrio</label>
+        <input type="text" id="zona" placeholder="Ej: Nueva Córdoba">
       </div>
     </div>
 
     <div class="campo">
       <label class="campo-label">Contame más</label>
-      <textarea id="consulta" placeholder="Ej: necesito vender para comprar · tengo crédito aprobado · presupuesto aproximado · zonas de preferencia · detalles importantes..."></textarea>
+      <textarea id="consulta" placeholder="Presupuesto, tamaño, características importantes, urgencia..."></textarea>
     </div>
 
     <hr class="divider">
@@ -335,6 +337,8 @@
     </button>
 
     <p class="nota">Tu consulta se abrirá directamente en WhatsApp.<br>No almacenamos tus datos.</p>
+
+    </div>
 
   </div>
 
@@ -351,6 +355,12 @@ function selTipo(btn) {
   document.querySelectorAll('.tipo-btn').forEach(function(b) { b.classList.remove('activo'); });
   btn.classList.add('activo');
   tipoSeleccionado = btn.getAttribute('data-tipo');
+  var paso2 = document.getElementById('paso2');
+  paso2.style.maxHeight = '600px';
+  paso2.style.opacity = '1';
+  setTimeout(function() {
+    paso2.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 120);
 }
 function enviarWA() {
   var nombre   = document.getElementById('nombre').value.trim();
