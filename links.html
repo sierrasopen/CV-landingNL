@@ -168,29 +168,44 @@
 
 <!-- formas decorativas de fondo -->
 <svg style="position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;" viewBox="0 0 390 844" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-  <!-- grupo superior derecha — flota hacia arriba -->
-  <g style="transform-origin:370px 0px; animation: flotar 7s ease-in-out infinite;">
-    <circle cx="370" cy="-20" r="180" fill="none" stroke="rgba(26,77,82,0.2)" stroke-width="1"/>
-    <circle cx="370" cy="-20" r="130" fill="none" stroke="rgba(26,77,82,0.14)" stroke-width="1"/>
-    <circle cx="370" cy="-20" r="80" fill="rgba(26,77,82,0.08)" stroke="rgba(26,77,82,0.18)" stroke-width="1"/>
+
+  <!-- CORAL — esquina superior derecha, flota -->
+  <g style="transform-origin:370px 60px; animation: flotar 7s ease-in-out infinite;">
+    <circle cx="370" cy="60" r="160" fill="none" stroke="rgba(250,81,82,0.18)" stroke-width="1"/>
+    <circle cx="370" cy="60" r="110" fill="none" stroke="rgba(250,81,82,0.12)" stroke-width="1"/>
+    <circle cx="370" cy="60" r="65" fill="rgba(250,81,82,0.07)" stroke="rgba(250,81,82,0.15)" stroke-width="1"/>
   </g>
-  <!-- grupo inferior izquierda — flota hacia abajo -->
-  <g style="transform-origin:-30px 870px; animation: flotar2 9s ease-in-out infinite;">
-    <circle cx="-30" cy="870" r="200" fill="none" stroke="rgba(13,47,51,0.18)" stroke-width="1"/>
-    <circle cx="-30" cy="870" r="140" fill="rgba(13,47,51,0.07)" stroke="rgba(13,47,51,0.14)" stroke-width="1"/>
+
+  <!-- CREMA — centro izquierda, flota lento -->
+  <g style="transform-origin:30px 420px; animation: flotar2 11s ease-in-out infinite;">
+    <circle cx="30" cy="420" r="120" fill="none" stroke="rgba(250,240,220,0.12)" stroke-width="1"/>
+    <circle cx="30" cy="420" r="75" fill="rgba(250,240,220,0.06)" stroke="rgba(250,240,220,0.1)" stroke-width="1"/>
   </g>
-  <!-- acento coral — pulsa -->
-  <g style="transform-origin:340px 750px; animation: pulsar 5s ease-in-out infinite;">
-    <circle cx="340" cy="750" r="50" fill="rgba(250,81,82,0.08)" stroke="rgba(250,81,82,0.15)" stroke-width="1"/>
-    <circle cx="340" cy="750" r="26" fill="rgba(250,81,82,0.06)"/>
+
+  <!-- CREMA — esquina inferior derecha, flota -->
+  <g style="transform-origin:380px 820px; animation: flotar 13s ease-in-out infinite 2s;">
+    <circle cx="380" cy="820" r="140" fill="none" stroke="rgba(250,240,220,0.1)" stroke-width="1"/>
+    <circle cx="380" cy="820" r="85" fill="rgba(250,240,220,0.05)" stroke="rgba(250,240,220,0.09)" stroke-width="1"/>
   </g>
-  <!-- líneas diagonales -->
-  <line x1="0" y1="300" x2="160" y2="500" stroke="rgba(26,77,82,0.12)" stroke-width="1" stroke-dasharray="4,8"/>
-  <line x1="390" y1="200" x2="230" y2="450" stroke="rgba(26,77,82,0.09)" stroke-width="1" stroke-dasharray="4,8"/>
-  <!-- puntos — pulsan -->
-  <circle cx="55" cy="140" r="4" fill="rgba(250,81,82,0.3)" style="animation: pulsar 4s ease-in-out infinite;"/>
-  <circle cx="335" cy="400" r="3" fill="rgba(26,77,82,0.35)" style="animation: pulsar 6s ease-in-out infinite 1s;"/>
-  <circle cx="20" cy="600" r="3" fill="rgba(250,81,82,0.2)" style="animation: pulsar 5s ease-in-out infinite 2s;"/>
+
+  <!-- CORAL — esquina inferior izquierda, pulsa -->
+  <g style="transform-origin:-20px 780px; animation: flotar2 9s ease-in-out infinite 1s;">
+    <circle cx="-20" cy="780" r="130" fill="none" stroke="rgba(250,81,82,0.14)" stroke-width="1"/>
+    <circle cx="-20" cy="780" r="80" fill="rgba(250,81,82,0.06)" stroke="rgba(250,81,82,0.12)" stroke-width="1"/>
+  </g>
+
+  <!-- puntos coral -->
+  <circle cx="55" cy="160" r="5" fill="rgba(250,81,82,0.4)" style="animation: pulsar 4s ease-in-out infinite;"/>
+  <circle cx="310" cy="480" r="4" fill="rgba(250,81,82,0.3)" style="animation: pulsar 5s ease-in-out infinite 1.5s;"/>
+
+  <!-- puntos crema -->
+  <circle cx="340" cy="280" r="4" fill="rgba(250,240,220,0.4)" style="animation: pulsar 6s ease-in-out infinite 0.5s;"/>
+  <circle cx="60" cy="650" r="3" fill="rgba(250,240,220,0.3)" style="animation: pulsar 7s ease-in-out infinite 2s;"/>
+  <circle cx="200" cy="80" r="3" fill="rgba(250,240,220,0.25)" style="animation: pulsar 5s ease-in-out infinite 1s;"/>
+
+  <!-- líneas sutiles -->
+  <line x1="0" y1="280" x2="140" y2="460" stroke="rgba(250,81,82,0.08)" stroke-width="1" stroke-dasharray="3,9"/>
+  <line x1="390" y1="350" x2="250" y2="560" stroke="rgba(250,240,220,0.07)" stroke-width="1" stroke-dasharray="3,9"/>
 </svg>
 
 <div class="wrap" style="position:relative;z-index:1;">
@@ -246,7 +261,7 @@
       </div>
       <div class="item-text">
         <div class="item-titulo">Pre-diagnóstico de Marketing</div>
-        <div class="item-desc">3 minutos · propuesta real para tu negocio</div>
+        <div class="item-desc">3 minutos · 1 propuesta real para tu negocio</div>
       </div>
       <div class="item-arrow">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
