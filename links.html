@@ -144,9 +144,7 @@
 
   /* BADGE GRATIS */
   .badge {
-    position: absolute;
-    top: 10px;
-    right: 12px;
+    display: inline-block;
     font-size: 8px;
     font-weight: 700;
     letter-spacing: 0.12em;
@@ -155,6 +153,8 @@
     color: white;
     padding: 3px 8px;
     border-radius: 20px;
+    vertical-align: middle;
+    margin-left: 7px;
   }
 
   .footer {
@@ -273,14 +273,13 @@
 
     <!-- 4. Ebook -->
     <a class="item" href="/ebook">
-      <div class="badge">Gratis</div>
       <div class="item-icon gold">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9922a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
         </svg>
       </div>
       <div class="item-text">
-        <div class="item-titulo">Guía de Empoderamiento Digital</div>
+        <div class="item-titulo">Guía de Empoderamiento Digital <span class="badge">Gratis</span></div>
         <div class="item-desc">Para mujeres +40 · lectura gratuita e inmediata</div>
       </div>
       <div class="item-arrow">
