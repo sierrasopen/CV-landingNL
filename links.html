@@ -93,18 +93,21 @@
     display: flex;
     align-items: center;
     gap: 18px;
-    background: #fff;
+    background: rgba(26,77,82,0.45);
+    border: 1px solid rgba(255,255,255,0.1);
     border-radius: 12px;
     padding: 18px 22px;
     text-decoration: none;
     color: inherit;
-    box-shadow: 0 1px 8px rgba(0,0,0,0.06);
-    transition: box-shadow 0.2s, transform 0.2s;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+    backdrop-filter: blur(4px);
+    transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
     position: relative;
     overflow: hidden;
   }
   .item:hover {
-    box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+    background: rgba(26,77,82,0.65);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.3);
     transform: translateY(-1px);
   }
   .item-icon {
@@ -116,27 +119,27 @@
     align-items: center;
     justify-content: center;
   }
-  .item-icon.verde { background: #e8f2ee; }
-  .item-icon.coral { background: #fdeaea; }
-  .item-icon.dark  { background: #1a1a1a; }
-  .item-icon.gold  { background: #fef6e4; }
+  .item-icon.verde { background: rgba(255,255,255,0.1); }
+  .item-icon.coral { background: rgba(250,81,82,0.15); }
+  .item-icon.dark  { background: rgba(255,255,255,0.08); }
+  .item-icon.gold  { background: rgba(201,146,42,0.15); }
   .item-text { flex: 1; }
   .item-titulo {
     font-size: 13px;
     font-weight: 700;
-    color: #1a1a1a;
+    color: #ffffff;
     margin-bottom: 3px;
     letter-spacing: 0.01em;
   }
   .item-desc {
     font-size: 10.5px;
     font-weight: 400;
-    color: #999;
+    color: rgba(255,255,255,0.55);
     line-height: 1.4;
   }
   .item-arrow {
     flex-shrink: 0;
-    color: #ccc;
+    color: rgba(255,255,255,0.35);
   }
 
   /* BADGE GRATIS */
