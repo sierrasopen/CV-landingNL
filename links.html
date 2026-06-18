@@ -15,7 +15,13 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: 'Montserrat', sans-serif;
-    background: var(--gris);
+    background-color: #0b1410;
+    background-image:
+      linear-gradient(rgba(25,100,77,0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(25,100,77,0.08) 1px, transparent 1px),
+      radial-gradient(ellipse 60% 50% at 80% 10%, rgba(250,81,82,0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 60% at 10% 90%, rgba(25,100,77,0.1) 0%, transparent 60%);
+    background-size: 36px 36px, 36px 36px, 100% 100%, 100% 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -33,7 +39,7 @@
   .logo {
     font-weight: 900;
     font-size: 40px;
-    color: var(--verde);
+    color: #ffffff;
     letter-spacing: -0.03em;
     line-height: 1;
     margin-bottom: 10px;
@@ -42,7 +48,7 @@
   .nombre {
     font-size: 13px;
     font-weight: 600;
-    color: #2a2a2a;
+    color: rgba(255,255,255,0.85);
     letter-spacing: 0.12em;
     text-transform: uppercase;
     margin-bottom: 5px;
@@ -50,7 +56,7 @@
   .rol {
     font-size: 11px;
     font-weight: 300;
-    color: #888;
+    color: rgba(255,255,255,0.4);
     letter-spacing: 0.04em;
   }
   .linea {
@@ -133,7 +139,7 @@
     text-align: center;
     margin-top: 32px;
     font-size: 9.5px;
-    color: #bbb;
+    color: rgba(255,255,255,0.25);
     letter-spacing: 0.12em;
     text-transform: uppercase;
   }
