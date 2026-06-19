@@ -93,53 +93,53 @@
     display: flex;
     align-items: center;
     gap: 18px;
-    background: rgba(250,240,215,0.13);
-    border: 1px solid rgba(250,240,215,0.22);
-    border-radius: 12px;
+    background: rgba(250,242,224,0.92);
+    border: 1px solid rgba(250,242,224,0.6);
+    border-radius: 14px;
     padding: 18px 22px;
     text-decoration: none;
     color: inherit;
-    box-shadow: 0 2px 14px rgba(0,0,0,0.18);
-    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.28), 0 0 0 1px rgba(250,242,224,0.15);
+    backdrop-filter: blur(4px);
     transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
     position: relative;
     overflow: hidden;
   }
   .item:hover {
-    background: rgba(250,240,215,0.22);
-    box-shadow: 0 4px 24px rgba(0,0,0,0.28);
-    transform: translateY(-1px);
+    background: rgba(255,248,234,0.97);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.32), 0 0 0 1px rgba(250,242,224,0.3);
+    transform: translateY(-2px);
   }
   .item-icon {
     flex-shrink: 0;
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .item-icon.verde { background: rgba(255,255,255,0.1); }
-  .item-icon.coral { background: rgba(250,81,82,0.15); }
-  .item-icon.dark  { background: rgba(255,255,255,0.08); }
-  .item-icon.gold  { background: rgba(201,146,42,0.15); }
+  .item-icon.verde { background: #dff0e9; }
+  .item-icon.coral { background: #fdeaea; }
+  .item-icon.dark  { background: #e8f2ee; }
+  .item-icon.gold  { background: #fef6e4; }
   .item-text { flex: 1; }
   .item-titulo {
     font-size: 13px;
     font-weight: 700;
-    color: #ffffff;
+    color: #1a1a1a;
     margin-bottom: 3px;
     letter-spacing: 0.01em;
   }
   .item-desc {
     font-size: 10.5px;
     font-weight: 400;
-    color: rgba(255,255,255,0.55);
+    color: #888;
     line-height: 1.4;
   }
   .item-arrow {
     flex-shrink: 0;
-    color: rgba(255,255,255,0.35);
+    color: #bbb;
   }
 
   /* BADGE GRATIS */
@@ -225,7 +225,7 @@
     <!-- 1. Sitio web -->
     <a class="item" href="/">
       <div class="item-icon verde">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#19644d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
           <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
         </svg>
@@ -242,7 +242,7 @@
     <!-- 2. Consulta Inmobiliaria -->
     <a class="item" href="/inmo">
       <div class="item-icon coral">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fa5152" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fa5152" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
         </svg>
       </div>
@@ -258,8 +258,9 @@
     <!-- 3. Pre-diagnóstico -->
     <a class="item" href="/prediagnostico">
       <div class="item-icon verde">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#19644d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
+          <line x1="3" y1="20" x2="21" y2="20"/>
         </svg>
       </div>
       <div class="item-text">
@@ -274,7 +275,7 @@
     <!-- 4. Ebook -->
     <a class="item" href="/ebook">
       <div class="item-icon gold">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9922a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9922a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
         </svg>
       </div>
