@@ -306,47 +306,6 @@ section{padding:100px 60px;}
 }
 .serv-cta:hover{border-color:var(--coral);}
 
-/* ── PLANES Y PRECIOS ── */
-#planes{background:var(--v2);border-top:1px solid rgba(255,255,255,0.06);}
-.planes-grid{
-  display:grid;grid-template-columns:repeat(2,1fr);gap:1px;
-  background:rgba(255,255,255,0.06);
-  margin-top:20px;margin-bottom:20px;
-}
-.plan-card{
-  background:var(--v2);
-  padding:36px 32px;
-  transition:background 0.3s;
-}
-.plan-card:hover{background:var(--v);}
-.plan-nombre{
-  font-family:'Raleway',sans-serif;font-weight:700;
-  font-size:18px;letter-spacing:0.08em;text-transform:uppercase;
-  color:var(--blanco);margin-bottom:16px;
-}
-.plan-price-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px;}
-.plan-price-tag{
-  font-size:12px;font-weight:700;letter-spacing:0.08em;
-  text-transform:uppercase;color:var(--coral);
-  border:1px solid rgba(250,81,82,0.3);
-  padding:6px 14px;border-radius:20px;
-}
-.plan-items{list-style:none;display:flex;flex-direction:column;gap:8px;}
-.plan-items li{
-  font-family:'Nunito',sans-serif;font-weight:300;
-  font-size:15px;color:rgba(255,255,255,0.5);
-  line-height:1.5;padding-left:16px;position:relative;
-}
-.plan-items li::before{
-  content:'✓';position:absolute;left:0;top:0;
-  color:var(--menta);font-size:12px;font-weight:700;
-}
-.planes-disclaimer{
-  font-family:'Nunito',sans-serif;font-style:italic;font-weight:300;
-  font-size:14px;color:rgba(255,255,255,0.35);
-  margin-bottom:8px;
-}
-
 /* ── TESTIMONIOS ── */
 #testimonios{background:#0a2e22;}
 .testi-grid{
@@ -536,11 +495,6 @@ footer{
   .servicios-intro{text-align:center;}
   .servicios-grid{grid-template-columns:1fr;}
   .servicio-card{padding:28px 20px;}
-
-  .planes-grid{grid-template-columns:1fr;}
-  .plan-card{padding:28px 20px;text-align:center;}
-  .plan-price-row{justify-content:center;}
-  .plan-items li{text-align:left;}
 
   .testi-grid{grid-template-columns:1fr;}
   .testi-card{padding:32px 24px;}
@@ -736,64 +690,6 @@ footer{
       <a href="https://wa.me/543515165220?text=Hola%20Natalia%2C%20quiero%20mejorar%20mi%20negocio" class="serv-cta">Consultanos →</a>
     </div>
   </div>
-</section>
-
-<!-- PLANES Y PRECIOS -->
-<section id="planes">
-  <div class="s-label">Inversión</div>
-  <div class="s-title" style="text-align:center;font-weight:300;font-family:'Cormorant Garamond',serif;font-style:italic;letter-spacing:0.08em;text-transform:none;">Planes y precios</div>
-  <div class="planes-grid">
-    <div class="plan-card">
-      <div class="plan-nombre">Arranque Digital</div>
-      <div class="plan-price-row">
-        <span class="plan-price-tag">Setup USD 150-300</span>
-      </div>
-      <ul class="plan-items">
-        <li>Auditoría</li>
-        <li>Landing simple</li>
-        <li>WhatsApp con bot configurado</li>
-        <li>Capacitación 1:1</li>
-      </ul>
-    </div>
-
-    <div class="plan-card">
-      <div class="plan-nombre">Presencia Esencial</div>
-      <div class="plan-price-row">
-        <span class="plan-price-tag">Mensual USD 150-300</span>
-      </div>
-      <ul class="plan-items">
-        <li>8-10 posts/mes</li>
-        <li>Piezas de marca</li>
-        <li>Respuestas automáticas</li>
-        <li>Reporte mensual</li>
-      </ul>
-    </div>
-
-    <div class="plan-card">
-      <div class="plan-nombre">Presencia + Contenido IA</div>
-      <div class="plan-price-row">
-        <span class="plan-price-tag">Mensual USD 300-550</span>
-      </div>
-      <ul class="plan-items">
-        <li>Todo lo de Presencia Esencial</li>
-        <li>4-6 reels/mes con IA</li>
-      </ul>
-    </div>
-
-    <div class="plan-card">
-      <div class="plan-nombre">Gestión de Públicos Clave</div>
-      <div class="plan-price-row">
-        <span class="plan-price-tag">USD 200-600 por campaña</span>
-      </div>
-      <ul class="plan-items">
-        <li>Vínculo con proveedores</li>
-        <li>Vínculo con clientes y empleados</li>
-        <li>Vínculo con influencers e instituciones</li>
-      </ul>
-    </div>
-  </div>
-  <p class="planes-disclaimer">Precios de referencia, cotización final según alcance.</p>
-  <a href="https://wa.me/543515165220?text=Hola%20Natalia%2C%20quiero%20mejorar%20mi%20negocio" class="serv-cta">Consultanos →</a>
 </section>
 
 <!-- TESTIMONIOS -->
