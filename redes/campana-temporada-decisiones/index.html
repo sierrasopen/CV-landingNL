@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Campaña de contenido de 1 mes para NLZ Inmobiliaria — Temporada de Decisiones.">
+<title>Campaña NLZ · Temporada de Decisiones</title>
+<style>
+  :root{
+    --verde:#1E3A31;        /* verde bosque profundo */
+    --verde-2:#274A3E;      /* superficie verde */
+    --verde-3:#32604F;      /* verde medio */
+    --coral:#EF6A5B;        /* acento */
+    --coral-soft:#f6a99e;
+    --crema:#F4EFE6;        /* fondo claro */
+    --crema-2:#EAE3D5;      /* superficie crema */
+    --ink:#1a2b24;          /* texto principal (sobre crema) */
+    --muted:#5f7167;        /* texto secundario, sesgo verde */
+    --line:#d8cfbd;         /* hairline sobre crema */
+    --ground:var(--crema);
+    --surface:#fbf8f2;
+    --card:#ffffff;
+    --card-line:#e6ddcc;
+    --heading:var(--verde);
+    --body-ink:var(--ink);
+    --chip-ink:var(--verde);
+    --shadow:0 1px 2px rgba(30,58,49,.06), 0 12px 30px -18px rgba(30,58,49,.35);
+  }
+  :root:not([data-theme="light"]){}
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ground:#14231d;
+      --surface:#182b23;
+      --card:#1d322a;
+      --card-line:#2c4a3d;
+      --line:#2c4a3d;
+      --ink:#eae3d5;
+      --muted:#9db3a7;
+      --heading:#f4efe6;
+      --body-ink:#eae3d5;
+      --chip-ink:#f4efe6;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 18px 40px -22px rgba(0,0,0,.7);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#14231d;
+    --surface:#182b23;
+    --card:#1d322a;
+    --card-line:#2c4a3d;
+    --line:#2c4a3d;
+    --ink:#eae3d5;
+    --muted:#9db3a7;
+    --heading:#f4efe6;
+    --body-ink:#eae3d5;
+    --chip-ink:#f4efe6;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 18px 40px -22px rgba(0,0,0,.7);
+  }
+
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--body-ink);
+    font-family:"Archivo",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1120px;margin:0 auto;padding-inline:22px;}
+  h1,h2,h3,h4{font-family:"Fraunces","Georgia",serif;color:var(--heading);
+    text-wrap:balance;font-weight:600;margin:0;line-height:1.05;}
+  .serif{font-family:"Fraunces","Georgia",serif;}
+  .kick{font-family:"Archivo",sans-serif;text-transform:uppercase;letter-spacing:.22em;
+    font-size:12px;font-weight:600;color:var(--coral);}
+  a{color:inherit;}
+
+  /* ---------- HERO ---------- */
+  .hero{background:
+      radial-gradient(120% 90% at 85% -10%, rgba(239,106,91,.20), transparent 55%),
+      linear-gradient(180deg,#22443A 0%, var(--verde) 60%, #16281F 100%);
+    color:var(--crema);padding-block:56px 60px;border-bottom:3px solid var(--coral);}
+  .hero .wrap{display:grid;gap:26px;}
+  .brandrow{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+  .logo{font-family:"Archivo";font-weight:800;letter-spacing:.02em;font-size:22px;color:#fff;}
+  .logo b{color:var(--coral);}
+  .logo small{display:block;font-weight:600;font-size:10px;letter-spacing:.28em;color:#b9c8bf;margin-top:2px;}
+  .hero-sep{width:1px;height:34px;background:rgba(255,255,255,.22);}
+  .hero-meta{font-size:12.5px;letter-spacing:.04em;color:#c7d4cb;}
+  .hero h1{color:#fff;font-size:clamp(40px,7.5vw,76px);letter-spacing:-.01em;}
+  .hero h1 em{font-style:italic;color:var(--coral-soft);}
+  .lede{max-width:60ch;color:#dbe4dd;font-size:clamp(16px,2vw,18px);}
+  .hero-tags{display:flex;flex-wrap:wrap;gap:8px;}
+  .htag{border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 13px;font-size:12.5px;color:#eaf1ec;}
+  .htag b{color:var(--coral-soft);font-weight:700;}
+
+  /* ---------- STRATEGY STRIP ---------- */
+  .strip{background:var(--surface);border-bottom:1px solid var(--line);}
+  .strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+    padding:0;background:var(--line);}
+  .stat{background:var(--surface);padding:22px 20px;}
+  .stat .kick{color:var(--muted);}
+  .stat .big{font-family:"Fraunces",serif;color:var(--heading);font-size:clamp(24px,3vw,32px);
+    margin-top:6px;line-height:1;}
+  .stat p{margin:6px 0 0;color:var(--muted);font-size:13.5px;}
+
+  section{padding-block:44px;}
+  .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;
+    flex-wrap:wrap;margin-bottom:26px;border-bottom:1px solid var(--line);padding-bottom:16px;}
+  .section-head h2{font-size:clamp(26px,3.4vw,34px);}
+  .section-head p{margin:6px 0 0;color:var(--muted);max-width:52ch;font-size:14.5px;}
+
+  /* ---------- PILARES ---------- */
+  .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  .pillar{background:var(--card);border:1px solid var(--card-line);border-radius:14px;padding:18px;
+    box-shadow:var(--shadow);}
+  .pillar .no{font-family:"Fraunces",serif;font-size:15px;color:var(--coral);font-weight:600;}
+  .pillar h3{font-size:19px;margin:8px 0 6px;}
+  .pillar p{margin:0;color:var(--muted);font-size:13.5px;}
+
+  /* ---------- WEEK ---------- */
+  .week{margin-top:10px;}
+  .week-head{background:linear-gradient(100deg,var(--verde) 0%, var(--verde-3) 130%);
+    color:var(--crema);border-radius:16px 16px 0 0;padding:20px 22px;
+    display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;}
+  .week-head .l{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;}
+  .week-num{font-family:"Fraunces",serif;font-size:34px;color:var(--coral-soft);line-height:.9;}
+  .week-head h3{color:#fff;font-size:23px;}
+  .week-head .theme{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:#bcccc2;margin-top:3px;}
+  .week-goal{font-size:12.5px;color:#dfe8e2;border:1px solid rgba(255,255,255,.25);
+    border-radius:999px;padding:6px 13px;}
+  .week-goal b{color:var(--coral-soft);}
+  .posts{border:1px solid var(--card-line);border-top:none;border-radius:0 0 16px 16px;overflow:hidden;}
+
+  .post{display:grid;grid-template-columns:150px 1fr;gap:0;background:var(--card);
+    border-top:1px solid var(--card-line);}
+  .post:first-child{border-top:none;}
+  .post-side{background:var(--surface);border-right:1px solid var(--card-line);padding:18px 16px;
+    display:flex;flex-direction:column;gap:10px;}
+  .fmt{align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    padding:4px 10px;border-radius:999px;}
+  .fmt.carrusel{background:rgba(239,106,91,.14);color:var(--coral);}
+  .fmt.reel{background:rgba(50,96,79,.16);color:var(--verde-3);}
+  .fmt.story{background:rgba(30,58,49,.1);color:var(--muted);}
+  :root:not([data-theme="light"]) .fmt.reel, :root[data-theme="dark"] .fmt.reel{color:#7fc3a6;}
+  .day{font-size:12px;color:var(--muted);font-weight:600;}
+  .obj{font-size:12px;color:var(--muted);}
+  .obj b{color:var(--body-ink);display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px;}
+  .post-body{padding:20px 22px;min-width:0;}
+  .hook{font-family:"Fraunces",serif;font-size:21px;color:var(--heading);margin:0 0 4px;line-height:1.12;}
+  .subhook{color:var(--muted);font-size:13.5px;margin:0 0 14px;}
+  .slides{margin:0 0 14px;padding:0;list-style:none;display:grid;gap:6px;
+    counter-reset:s;}
+  .slides li{position:relative;padding-left:34px;font-size:14px;color:var(--body-ink);}
+  .slides li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:1px;
+    width:22px;height:22px;border-radius:6px;background:var(--verde);color:#fff;
+    font-family:"Archivo";font-size:11px;font-weight:700;display:grid;place-items:center;}
+  .slides li:last-child::before{background:var(--coral);}
+  .cap{background:var(--surface);border:1px dashed var(--card-line);border-radius:10px;padding:12px 14px;
+    font-size:13.5px;color:var(--body-ink);}
+  .cap .lbl{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);font-weight:700;display:block;margin-bottom:5px;}
+  .tags{color:var(--muted);font-size:12.5px;margin-top:8px;}
+  .cta{margin-top:10px;font-size:13px;}
+  .cta b{color:var(--coral);}
+
+  /* ---------- STORIES / WORKFLOW ---------- */
+  .cols2{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .panel{background:var(--card);border:1px solid var(--card-line);border-radius:14px;padding:22px;box-shadow:var(--shadow);}
+  .panel h3{font-size:20px;margin-bottom:10px;}
+  .checklist{list-style:none;margin:0;padding:0;display:grid;gap:9px;}
+  .checklist li{position:relative;padding-left:26px;font-size:14px;}
+  .checklist li::before{content:"";position:absolute;left:0;top:7px;width:10px;height:10px;border-radius:3px;
+    background:var(--coral);}
+  .checklist.g li::before{background:var(--verde-3);}
+  .tip{border-left:3px solid var(--coral);padding-left:14px;margin:14px 0;}
+  .tip b{color:var(--heading);}
+  .swatches{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px;}
+  .sw{width:52px;height:52px;border-radius:9px;border:1px solid rgba(0,0,0,.1);
+    display:flex;align-items:flex-end;font-size:9px;color:#fff;padding:4px;font-weight:600;}
+
+  footer{background:var(--verde);color:#cdd8d0;padding-block:30px;border-top:3px solid var(--coral);}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center;}
+  footer b{color:#fff;}
+  .note{background:rgba(239,106,91,.10);border:1px solid rgba(239,106,91,.3);border-radius:12px;
+    padding:14px 16px;font-size:13.5px;color:var(--body-ink);margin-top:18px;}
+  .note b{color:var(--coral);}
+
+  @media(max-width:820px){
+    .strip .wrap{grid-template-columns:1fr 1fr;}
+    .pillars{grid-template-columns:1fr 1fr;}
+    .cols2{grid-template-columns:1fr;}
+  }
+  @media(max-width:560px){
+    .post{grid-template-columns:1fr;}
+    .post-side{flex-direction:row;flex-wrap:wrap;align-items:center;border-right:none;border-bottom:1px solid var(--card-line);}
+    .pillars{grid-template-columns:1fr;}
+    .strip .wrap{grid-template-columns:1fr;}
+  }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Archivo:wght@400;500;600;700;800&display=swap">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="brandrow">
+      <div class="logo">NL<b>Z</b> INMOBILIARIA<small>CPI 6518 · @NATI_LUQUEZAMPIERI</small></div>
+      <div class="hero-sep"></div>
+      <div class="hero-meta">Plan de contenido · 4 semanas<br>Córdoba, Argentina · 15 sep – 12 oct</div>
+    </div>
+    <div>
+      <div class="kick" style="color:var(--coral-soft)">Campaña mensual</div>
+      <h1>Temporada de<br><em>decisiones</em></h1>
+    </div>
+    <p class="lede">La primavera mueve el mercado en Córdoba. Un mes para acompañar a quien duda entre comprar, vender o esperar — mostrando el oficio, los datos y el criterio de NLZ. Doce piezas de feed + historias, listas para producir.</p>
+    <div class="hero-tags">
+      <span class="htag"><b>12</b> posts de feed</span>
+      <span class="htag"><b>4</b> reels</span>
+      <span class="htag"><b>8</b> carruseles</span>
+      <span class="htag">Historias semanales</span>
+      <span class="htag">#<b>DecidirConNLZ</b></span>
+    </div>
+  </div>
+</header>
+
+<div class="strip">
+  <div class="wrap">
+    <div class="stat"><div class="kick">Objetivo</div><div class="big">Captar</div><p>Vendedores y compradores en fase de decisión (spring 2026).</p></div>
+    <div class="stat"><div class="kick">Cadencia</div><div class="big">3 / sem</div><p>Martes · Jueves · Sábado, 20:30 hs. Historias L-a-V.</p></div>
+    <div class="stat"><div class="kick">Voz</div><div class="big">Cercana</div><p>Experta, en "vos". Sin humo. Datos + historia real.</p></div>
+    <div class="stat"><div class="kick">Conversión</div><div class="big">Tasación</div><p>CTA madre del mes: agendar tasación sin cargo.</p></div>
+  </div>
+</div>
+
+<section class="wrap">
+  <div class="section-head">
+    <div><div class="kick">Estructura</div><h2>Cuatro pilares, cuatro semanas</h2></div>
+    <p>Cada semana lidera un pilar de contenido. La secuencia lleva del "quién sos y qué sabés" al "hablemos" sin que se sienta una venta.</p>
+  </div>
+  <div class="pillars">
+    <div class="pillar"><div class="no">S1 · Autoridad</div><h3>Valor real</h3><p>Cuánto vale de verdad una propiedad. Tasación y pericia como diferencial.</p></div>
+    <div class="pillar"><div class="no">S2 · Alcance</div><h3>Sin errores</h3><p>Mitos y errores caros al comprar o vender. Contenido que se guarda y comparte.</p></div>
+    <div class="pillar"><div class="no">S3 · Confianza</div><h3>Historias del oficio</h3><p>Relatos reales de operaciones. Marca personal y cercanía.</p></div>
+    <div class="pillar"><div class="no">S4 · Conversión</div><h3>Tu jugada</h3><p>Comparativas, números y el empujón a decidir. CTA fuerte.</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="section-head">
+    <div><div class="kick">Calendario editorial</div><h2>El mes, post por post</h2></div>
+    <p>Cada ficha trae el gancho de portada, el texto slide por slide, el caption con hashtags y el CTA. Listo para pasar a diseño.</p>
+  </div>
+
+  <!-- ================= WEEK 1 ================= -->
+  <div class="week">
+    <div class="week-head">
+      <div class="l"><span class="week-num">01</span><div><h3>Valor real</h3><div class="theme">15 – 21 sep · Autoridad</div></div></div>
+      <div class="week-goal">Meta: <b>captar vendedores</b> + posicionar la tasación</div>
+    </div>
+    <div class="posts">
+
+      <div class="post">
+        <div class="post-side">
+          <span class="fmt carrusel">Carrusel · 7</span>
+          <span class="day">Mar 16</span>
+          <span class="obj"><b>Objetivo</b>Autoridad / guardados</span>
+        </div>
+        <div class="post-body">
+          <p class="hook">¿Cuánto vale realmente tu casa?</p>
+          <p class="subhook">Kicker: DATOS DEL OFICIO · Spoiler: no es lo que dice el vecino.</p>
+          <ol class="slides">
+            <li>Portada: "¿Cuánto vale <em>realmente</em> tu casa?" + "Deslizá →"</li>
+            <li>El precio no lo pone el dueño. Lo pone el mercado (y hoy el mercado escucha).</li>
+            <li>Factor 1 — Ubicación real: no el barrio, la cuadra. Servicios, ruido, orientación.</li>
+            <li>Factor 2 — Estado y actualización: lo que se ve y lo que un perito ve.</li>
+            <li>Factor 3 — Papeles en regla: escritura, planos, deudas. Un problema legal descuenta.</li>
+            <li>Factor 4 — Timing: cuánto se mueve tu zona hoy vs. hace 6 meses.</li>
+            <li>Cierre: "Tasar bien es el primer paso para vender rápido. Te la hago sin cargo → DM."</li>
+          </ol>
+          <div class="cap"><span class="lbl">Caption</span>
+            El error más caro no es vender barato: es publicar caro y quedarte 8 meses sin mover la aguja. 🏠 El precio no es una opinión, es un cruce de 4 factores concretos. Te los dejo en el carrusel. ¿Querés saber en cuál está parada tu propiedad hoy? Escribime "TASACIÓN" por DM.
+            <div class="tags">#Córdoba #Inmobiliaria #Tasación #VenderMiCasa #MercadoInmobiliario #NLZ</div>
+          </div>
+          <p class="cta">CTA: <b>DM "TASACIÓN"</b> · guardá el post</p>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-side">
+          <span class="fmt reel">Reel · 20-30s</span>
+          <span class="day">Jue 18</span>
+          <span class="obj"><b>Objetivo</b>Alcance / frenar el scroll</span>
+        </div>
+        <div class="post-body">
+          <p class="hook">3 señales de que te están tasando mal</p>
+          <p class="subhook">Reel a cámara, ritmo rápido, texto en pantalla.</p>
+          <ol class="slides">
+            <li>Gancho (0-3s): "Si te tasaron así, desconfiá 👇"</li>
+            <li>Señal 1: "Te dieron el número por teléfono, sin ver nada."</li>
+            <li>Señal 2: "El precio es igual al del portal, sin ajustar tu caso."</li>
+            <li>Señal 3: "Nadie te preguntó por los papeles."</li>
+            <li>Cierre a cámara: "Una tasación seria mira la propiedad y la carpeta. Agendá."</li>
+          </ol>
+          <div class="cap"><span class="lbl">Caption</span>
+            Una tasación no es un número al azar: es un informe. Si te dieron el valor sin ver la casa ni los papeles, te dieron un chiste. Guardalo para cuando decidas vender. 📌
+            <div class="tags">#Tasación #Córdoba #TipsInmobiliarios #VenderPropiedad #NLZinmobiliaria</div>
+          </div>
+          <p class="cta">CTA: <b>Guardá</b> + "agendá tu tasación" (link en bio)</p>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-side">
+          <span class="fmt carrusel">Carrusel · 6</span>
+          <span class="day">Sáb 20</span>
+          <span class="obj"><b>Objetivo</b>Prueba social / confianza</span>
+        </div>
+        <div class="post-body">
+          <p class="hook">Le dije que valía menos… y me lo agradeció</p>
+          <p class="subhook">Kicker: HISTORIAS DEL OFICIO · caso real (anonimizado).</p>
+          <ol class="slides">
+            <li>Portada foto: "Le dije que valía menos de lo que pensaba."</li>
+            <li>"Tenía el número de un tasador que quería la exclusiva a cualquier precio."</li>
+            <li>"Le mostré los comparables reales de su cuadra. La cara le cambió."</li>
+            <li>"Ajustamos el precio con criterio, no con miedo."</li>
+            <li>"Se vendió en 5 semanas, al valor que proyectamos."</li>
+            <li>Cierre: "Decir la verdad no cuesta la operación. La salva. → DM."</li>
+          </ol>
+          <div class="cap"><span class="lbl">Caption</span>
+            Prefiero perder una exclusiva antes que inflarte un precio que después te tiene 10 meses esperando. Esta operación se cerró porque empezamos por la verdad. Si querés que te diga el número real de tu propiedad —el que la vende— hablemos. 🤝
+            <div class="tags">#HistoriasDelOficio #Inmobiliaria #Córdoba #Confianza #VenderConCriterio</div>
+          </div>
+          <p class="cta">CTA: <b>DM</b> "quiero mi número real"</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= WEEK 2 ================= -->
+  <div class="week">
+    <div class="week-head">
+      <div class="l"><span class="week-num">02</span><div><h3>Sin errores</h3><div class="theme">22 – 28 sep · Alcance</div></div></div>
+      <div class="week-goal">Meta: <b>alcance y guardados</b> · contenido educativo</div>
+    </div>
+    <div class="posts">
+
+      <div class="post">
+        <div class="post-side">
+          <span class="fmt carrusel">Carrusel · 7</span>
+          <span class="day">Mar 23</span>
+          <span class="obj"><b>Objetivo</b>Guardados / compartidos</span>
+        </div>
+        <div class="post-body">
+          <p class="hook">5 errores que te hacen perder plata al vender</p>
+          <p class="subhook">Kicker: SIN ERRORES · formato listado, muy compartible.</p>
+          <ol class="slides">
+            <li>Portada: "5 errores que te hacen <em>perder plata</em> al vender" + "Deslizá →"</li>
+            <li>1. Poner el precio por lo que "necesitás", no por lo que vale.</li>
+            <li>2. Fotos con el celular a contraluz y la cama sin hacer.</li>
+            <li>3. Publicar en 6 portales sin una estrategia detrás.</li>
+            <li>4. Empezar con los papeles a medias y frenar la operación.</li>
+            <li>5. Estar en cada visita marcando defectos por nervios.</li>
+            <li>Cierre: "¿En cuántos caíste? Te ayudo a no repetirlos → DM."</li>
+          </ol>
+          <div class="cap"><span class="lbl">Caption</span>
+            Vender tu propiedad sin acompañamiento sale caro, pero no se nota hasta el mes 6. 👀 Estos 5 errores los veo TODAS las semanas. Guardá el post y mandáselo a ese amigo que "lo vende solo". 😅
+            <div class="tags">#VenderMiCasa #ErroresComunes #Córdoba #Inmobiliaria #TipsVenta #NLZ</div>
+          </div>
+          <p class="cta">CTA: <b>Guardá + compartí</b> · DM "vendo"</p>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-side">
+          <span class="fmt reel">Reel · 25s</span>
+          <span class="day">Jue 25</span>
+          <span class="obj"><b>Objetivo</b>Alcance / desmitificar</span>
+        </div>
+        <div class="post-body">
+          <p class="hook">El mito del "lo publico caro y después bajo"</p>
+          <p class="subhook">Reel a cámara. Tono cercano, contra-intuitivo.</p>
+          <ol class="slides">
+            <li>Gancho: "'Lo pongo caro y si no, bajo.' Pará. 🚩"</li>
+            <li>"Una propiedad tiene un solo estreno: la primera semana."</li>
+            <li>"Cara, nadie la mira. Y cuando bajás, ya pasó de moda."</li>
+            <li>"El interesado nuevo la ve vieja: '¿por qué no se vendió?'"</li>
+            <li>Cierre: "Precio justo desde el día 1 = venta rápida. Es matemática, no suerte."</li>
+          </ol>
+          <div class="cap"><span class="lbl">Caption</span>
+            La propiedad que baja de precio tres veces grita "algo tiene". La que sale a valor justo se vende en las primeras semanas, cuando el interés está fresco. No es magia: es entender cómo mira el comprador. 📉➡️📈
+            <div class="tags">#MitosInmobiliarios #Córdoba #PrecioDeVenta #Inmobiliaria #NLZinmobiliaria</div>
+          </div>
+          <p class="cta">CTA: comentá "MITO" para la parte 2</p>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-side">
+          <span class="fmt carrusel">Carrusel · 8</span>
+          <span class="day">Sáb 27</span>
+          <span class="obj"><b>Objetivo</b>Captar compradores</span>
+        </div>
+        <div class="post-body">
+          <p class="hook">Tu primera propiedad: la checklist que nadie te da</p>
+          <p class="subhook">Kicker: SIN ERRORES · guía práctica para compradores.</p>
+          <ol class="slides">
+            <li>Portada: "Comprás tu primera propiedad. La checklist que <em>nadie</em> te da."</li>
+            <li>Antes de enamorarte: definí presupuesto real (con gastos de escritura).</li>
+            <li>Pedí la matrícula y verificá titularidad. Siempre.</li>
+            <li>Chequeá deudas: municipal, rentas, expensas.</li>
+            <li>Visitá dos veces: una de día, otra de noche.</li>
+            <li>Preguntá por planos aprobados y ampliaciones sin declarar.</li>
+            <li>Reservá por escrito, con boleto claro. Nunca de palabra.</li>
+            <li>Cierre: "Guardala. Y si querés, la recorremos juntos → DM."</li>
+          </ol>
+          <div class="cap"><span class="lbl">Caption</span>
+            Comprar tu primera propiedad es emocionante… y ahí está el peligro. 💛 Esta checklist te la deberían dar antes de la primera visita. Guardala para cuando salgas a buscar, y si querés un ojo experto al lado, escribime.
+            <div class="tags">#PrimeraPropiedad #ComprarEnCórdoba #Inmobiliaria #Checklist #NLZ</div>
+          </div>
+          <p class="cta">CTA: <b>Guardá</b> · DM "quiero comprar"</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= WEEK 3 ================= -->
+  <div class="week">
+    <div class="week-head">
+      <div class="l"><span class="week-num">03</span><div><h3>Historias del oficio</h3><div class="theme">29 sep – 5 oct · Confianza</div></div></div>
+      <div class="week-goal">Meta: <b>conexión y marca personal</b> · más DMs</div>
+    </div>
+    <div class="posts">
+
+      <div class="post">
+        <div class="post-side">
+          <span class="fmt carrusel">Carrusel · 6</span>
+          <span class="day">Mar 30</span>
+          <span class="obj"><b>Objetivo</b>Storytelling / conexión</span>
+        </div>
+        <div class="post-body">
+          <p class="hook">La operación más difícil que cerré</p>
+          <p class="subhook">Kicker: HISTORIAS DEL OFICIO · continúa la serie ya publicada.</p>
+          <ol class="slides">
+            <li>Portada foto: "La operación más difícil que cerré. No se trabó por el dinero."</li>
+            <li>"Ninguno quería ceder. Uno sentía que bajar era perder; el otro, quedar en desventaja."</li>
+            <li>"El problema no era el precio. Era el orgullo de dos familias."</li>
+            <li>"Dejé de hablar de números y empecé a escuchar de qué tenían miedo."</li>
+            <li>"Cuando cada uno se sintió respetado, el acuerdo apareció solo."</li>
+            <li>Cierre: "Mi trabajo no es cerrar. Es que las dos partes duerman tranquilas. → DM."</li>
+          </ol>
+          <div class="cap"><span class="lbl">Caption</span>
+            La operación más difícil de mi carrera no se trabó por plata. Se trabó porque nadie quería sentir que perdía. 🤝 A veces el oficio es 20% inmobiliaria y 80% escuchar. Te cuento cómo se destrabó en el carrusel.
+            <div class="tags">#HistoriasDelOficio #Martillera #Córdoba #Negociación #NLZinmobiliaria</div>
+          </div>
+          <p class="cta">CTA: "¿Te pasó algo así? Contame en comentarios"</p>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-side">
+          <span class="fmt reel">Reel · 30s</span>
+          <span class="day">Jue 02 oct</span>
+          <span class="obj"><b>Objetivo</b>Marca personal / conoceme</span>
+        </div>
+        <div class="post-body">
+          <p class="hook">Por qué elegí ser martillera</p>
+          <p class="subhook">Reel a cámara, personal, luz cálida. Cierre humano.</p>
+          <ol class="slides">
+            <li>Gancho: "Nadie sueña de chica con ser martillera. Yo tampoco. 😅"</li>
+            <li>"Llegué buscando lo que a mí me faltó cuando compré: que alguien me cuidara."</li>
+            <li>"Vi gente perder los ahorros de su vida por un mal consejo."</li>
+            <li>"Dije: esto se puede hacer bien, con papeles y con respeto."</li>
+            <li>Cierre a cámara: "Por eso hago esto. Y por eso todavía me emociono en cada entrega de llaves. 🔑"</li>
+          </ol>
+          <div class="cap"><span class="lbl">Caption</span>
+            No soñaba con ser martillera. Soñaba con que comprar una casa no fuera una pesadilla. 💛 Hace [X] años que me dedico a que la operación más importante de tu vida esté en buenas manos. Gracias por confiar. ¿Nos conocemos por DM?
+            <div class="tags">#Conoceme #Martillera #Córdoba #DetrásDeEscena #NLZ</div>
+          </div>
+          <p class="cta">CTA: presentate en comentarios · DM abierto</p>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-side">
+          <span class="fmt carrusel">Carrusel · 6</span>
+          <span class="day">Sáb 04 oct</span>
+          <span class="obj"><b>Objetivo</b>Confianza / lección</span>
+        </div>
+        <div class="post-body">
+          <p class="hook">Lo que aprendí de una venta que se cayó</p>
+          <p class="subhook">Kicker: HISTORIAS DEL OFICIO · vulnerabilidad + autoridad.</p>
+          <ol class="slides">
+            <li>Portada: "Una vez se me cayó una venta a días de la escritura."</li>
+            <li>"Apareció una deuda que nadie había declarado. El comprador se bajó."</li>
+            <li>"Me dolió. Pero aprendí algo que hoy es mi obsesión."</li>
+            <li>"Ninguna operación mía avanza sin la carpeta legal impecable."</li>
+            <li>"Prefiero frenar 15 días que romper un sueño en la firma."</li>
+            <li>Cierre: "Los papeles no son un trámite. Son tu tranquilidad. → DM."</li>
+          </ol>
+          <div class="cap"><span class="lbl">Caption</span>
+            Sí, se me cayó una venta a días de la escritura. Y fue la mejor lección de mi carrera. 📑 Hoy reviso cada carpeta como si fuera la mía, porque una firma frustrada no se olvida. Los papeles al día no son burocracia: son que puedas festejar tranquila.
+            <div class="tags">#HistoriasDelOficio #SeguridadJurídica #Córdoba #Inmobiliaria #NLZinmobiliaria</div>
+          </div>
+          <p class="cta">CTA: DM "¿mis papeles están en regla?"</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= WEEK 4 ================= -->
+  <div class="week">
+    <div class="week-head">
+      <div class="l"><span class="week-num">04</span><div><h3>Tu jugada</h3><div class="theme">6 – 12 oct · Conversión</div></div></div>
+      <div class="week-goal">Meta: <b>agendar consultas</b> · cierre del mes</div>
+    </div>
+    <div class="posts">
+
+      <div class="post">
+        <div class="post-side">
+          <span class="fmt carrusel">Carrusel · 7</span>
+          <span class="day">Mar 07 oct</span>
+          <span class="obj"><b>Objetivo</b>Alcance / comparativa</span>
+        </div>
+        <div class="post-body">
+          <p class="hook">Con USD 100.000, ¿qué comprás en cada lugar?</p>
+          <p class="subhook">Kicker: NLZ INMOBILIARIA · CÓRDOBA · continúa la serie de comparativas.</p>
+          <ol class="slides">
+            <li>Portada foto skyline: "Con <em>USD 100.000</em> ¿qué comprás en cada lugar? 🌎"</li>
+            <li>Miami: un monoambiente chico, lejos de la costa.</li>
+            <li>Buenos Aires: 2 ambientes a estrenar en un barrio medio.</li>
+            <li>Córdoba capital: 2/3 ambientes con cochera en buena zona.</li>
+            <li>Sierras: casa con patio y aire de verdad.</li>
+            <li>Moraleja: en Córdoba, tu dólar todavía rinde. La ventana no es eterna.</li>
+            <li>Cierre: "¿Querés ver qué comprás HOY con tu presupuesto? → DM."</li>
+          </ol>
+          <div class="cap"><span class="lbl">Caption</span>
+            El mismo billete, cuatro vidas distintas. 🌎 En Córdoba USD 100.000 todavía te dan metros, luz y cochera — algo impensado en otras ciudades. Pero los ciclos se mueven. ¿Querés que te arme opciones reales con tu presupuesto? Escribime tu número por DM.
+            <div class="tags">#Córdoba #Inversión #DólarInmobiliario #ComprarEnCórdoba #NLZ</div>
+          </div>
+          <p class="cta">CTA: <b>DM</b> con tu presupuesto</p>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-side">
+          <span class="fmt reel">Reel · 25s</span>
+          <span class="day">Jue 09 oct</span>
+          <span class="obj"><b>Objetivo</b>Decisión / números</span>
+        </div>
+        <div class="post-body">
+          <p class="hook">Comprar vs. alquilar en Córdoba hoy</p>
+          <p class="subhook">Reel con texto en pantalla + cifras (actualizá los valores del mes).</p>
+          <ol class="slides">
+            <li>Gancho: "'¿Sigo alquilando o compro?' Los números 👇"</li>
+            <li>"Alquiler promedio 2 amb: $[ACTUALIZAR]/mes."</li>
+            <li>"En [X] años de alquiler pagaste [Y] y la propiedad no es tuya."</li>
+            <li>"Comprar hoy: cuota vs. alquiler, y el activo queda tuyo."</li>
+            <li>Cierre: "No es para todos ni para siempre. Hagamos TU cuenta. → DM."</li>
+          </ol>
+          <div class="cap"><span class="lbl">Caption</span>
+            "¿Compro o sigo alquilando?" es la pregunta del año. 🧮 La respuesta no es igual para todos: depende de tus ahorros, tu laburo y tu horizonte. Pero los números ayudan a decidir con la cabeza y no con la ansiedad. ¿Te armo tu cuenta personalizada? DM.
+            <div class="tags">#ComprarVsAlquilar #Córdoba #FinanzasPersonales #Inmobiliaria #NLZinmobiliaria</div>
+          </div>
+          <p class="cta">CTA: DM "mi cuenta" · link en bio</p>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-side">
+          <span class="fmt carrusel">Carrusel · 5</span>
+          <span class="day">Sáb 11 oct</span>
+          <span class="obj"><b>Objetivo</b>Conversión / oferta del mes</span>
+        </div>
+        <div class="post-body">
+          <p class="hook">Estás a un mensaje de decidir</p>
+          <p class="subhook">Kicker: TEMPORADA DE DECISIONES · cierre de campaña + oferta.</p>
+          <ol class="slides">
+            <li>Portada: "Todo octubre venís pensándolo. <em>Este es el mensaje.</em>"</li>
+            <li>"Si querés vender: te hago la tasación sin cargo esta semana."</li>
+            <li>"Si querés comprar: armamos tu búsqueda con criterio, no a ciegas."</li>
+            <li>"Si solo querés entender el mercado: también. Sin compromiso."</li>
+            <li>Cierre: "Escribime 'DECIDO' por DM. Empezamos hoy. 🔑"</li>
+          </ol>
+          <div class="cap"><span class="lbl">Caption</span>
+            Todo el mes te hablé de valor, errores, historias y números. Ahora te toca a vos. 💛 Cerramos la Temporada de Decisiones con una invitación simple: escribime "DECIDO" y vemos juntos tu próximo paso —vender, comprar o solo entender dónde estás parado. Sin humo, sin compromiso.
+            <div class="tags">#DecidirConNLZ #Córdoba #Inmobiliaria #Tasación #NLZinmobiliaria</div>
+          </div>
+          <p class="cta">CTA madre: <b>DM "DECIDO"</b> → agenda de tasación</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="note">⚠️ <b>Sobre el ejemplo de Instagram:</b> el link que pasaste está bloqueado por el proxy de red de esta sesión, así que no pude verlo. Esta campaña se apoya en el sistema visual que NLZ ya tiene publicado (verde bosque + coral, serif editorial, kickers en mayúscula). Si me describís qué te gustó de ese post o me compartís las imágenes, ajusto el estilo para que calquen.</div>
+</section>
+
+<section class="wrap">
+  <div class="section-head">
+    <div><div class="kick">Siempre activo</div><h2>Historias de la semana</h2></div>
+    <p>Bajo esfuerzo, alto vínculo. Rotá estos formatos de lunes a viernes para sostener alcance entre posts.</p>
+  </div>
+  <div class="cols2">
+    <div class="panel">
+      <h3>Rotación semanal de stories</h3>
+      <ul class="checklist">
+        <li><b>Lunes — Encuesta:</b> "¿Comprarías o alquilarías en 2026?" (sticker de votación).</li>
+        <li><b>Martes — Refuerzo:</b> teaser del carrusel del día, "¿lo viste?".</li>
+        <li><b>Miércoles — Detrás de escena:</b> una visita, una firma, café con mate.</li>
+        <li><b>Jueves — Caja de preguntas:</b> "Preguntame lo que quieras del mercado".</li>
+        <li><b>Viernes — Testimonio / entrega de llaves:</b> prueba social real.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>Ganchos de story que convierten</h3>
+      <ul class="checklist g">
+        <li>"3 cosas que miro antes de tasar" → link "agendá".</li>
+        <li>"Propiedad de la semana" → swipe up / DM.</li>
+        <li>Mini-encuesta: "¿Tu barrio subió o bajó?".</li>
+        <li>Antes/después de una foto mal tomada vs. bien tomada.</li>
+        <li>Cuenta regresiva a la oferta de tasación del cierre de mes.</li>
+      </ul>
+      <div class="tip"><b>Tip:</b> fijá en Destacados un álbum "Temporada de Decisiones" para que todo el mes viva en tu perfil.</div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="section-head">
+    <div><div class="kick">Para la agencia</div><h2>Producción sin perder tiempo</h2></div>
+    <p>Cómo bajar esta campaña a piezas reales optimizando horas y recursos — pensado para tu flujo de trabajo.</p>
+  </div>
+  <div class="cols2">
+    <div class="panel">
+      <h3>Sistema visual NLZ (reutilizable)</h3>
+      <div class="swatches">
+        <div class="sw" style="background:#1E3A31">#1E3A31</div>
+        <div class="sw" style="background:#32604F">#32604F</div>
+        <div class="sw" style="background:#EF6A5B">#EF6A5B</div>
+        <div class="sw" style="background:#F4EFE6;color:#1E3A31">#F4EFE6</div>
+      </div>
+      <ul class="checklist" style="margin-top:14px">
+        <li>Titular: serif editorial (Fraunces / Playfair / Canela).</li>
+        <li>Kicker en mayúscula, tracking amplio, coral o verde.</li>
+        <li>Foto full-bleed + degradado verde de abajo hacia arriba.</li>
+        <li>Firma fija: logo NLZ arriba-izq · @ abajo-der · "Deslizá →".</li>
+        <li>Dots de progreso coral en carruseles.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>Atajos de flujo con IA + herramientas</h3>
+      <ul class="checklist g">
+        <li><b>Plantilla única en Canva:</b> 1 portada + 1 slide de contenido. Cambiás texto y foto, nunca el diseño. (Conectá Canva a Claude para editar por texto).</li>
+        <li><b>Batch mensual:</b> producí las 12 piezas en 1–2 sesiones, no día por día.</li>
+        <li><b>Reutilizá lo que ya tenés:</b> las series <i>inmo_100k</i>, <i>inmo_historia_negociacion</i> y <i>li_tasacion</i> del repo ya están en este estilo.</li>
+        <li><b>Carpeta por cliente:</b> <code>redes/campana-temporada-decisiones/</code> guarda este plan versionado. Replicá la estructura por cada cliente de la agencia.</li>
+        <li><b>Banco de captions:</b> copiá los de este dossier a una hoja/Drive; ajustá cifras del mes antes de publicar.</li>
+      </ul>
+      <div class="tip"><b>Recomendación:</b> pedime "convertí la semana 1 en textos de Canva" o "generá 30 ideas de stories" y lo dejo listo para pegar. Así producís el mes entero en una tarde.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b>NLZ Inmobiliaria — Temporada de Decisiones</b><br>Plan de contenido · 4 semanas · Córdoba, AR</div>
+    <div style="text-align:right">@nati_luquezampieri · CPI 6518<br><b>#DecidirConNLZ</b></div>
+  </div>
+</footer>
+
+</body>
+</html>
