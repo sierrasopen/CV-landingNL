@@ -10,7 +10,6 @@ La respuesta no es igual para todos: depende de tus ahorros, tu laburo y tu hori
 CTA: DM "mi cuenta" · link en bio
 
 — GUION (25s, texto en pantalla + cifras — ACTUALIZAR los valores del mes)
-
 0-3s: "'¿Sigo alquilando o compro?' Los números 👇"
 3-9s: "Alquiler promedio 2 amb: $[ACTUALIZAR]/mes."
 9-15s: "En [X] años de alquiler pagaste [Y]… y la propiedad no es tuya."

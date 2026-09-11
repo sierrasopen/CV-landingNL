@@ -35,7 +35,6 @@ Si te dieron el valor sin ver la casa ni los papeles, te dieron un chiste. Guard
 CTA: Guardá + "agendá tu tasación" (link en bio)
 
 — GUION (20-30s, a cámara + texto en pantalla)
-
 0-3s (gancho): "Si te tasaron así, desconfiá 👇"
 3-9s: Señal 1 — "Te dieron el número por teléfono, sin ver nada."
 9-15s: Señal 2 — "El precio es igual al del portal, sin mirar tu caso."
@@ -82,7 +81,6 @@ La que sale a valor justo se vende en las primeras semanas, cuando el interés e
 CTA: Comentá "MITO" para la parte 2
 
 — GUION (25s, a cámara)
-
 0-3s: "'Lo pongo caro y si no, bajo.' Pará. 🚩"
 3-9s: "Una propiedad tiene un solo estreno: la primera semana."
 9-16s: "Cara, nadie la mira. Y cuando bajás, ya pasó de moda."
@@ -129,7 +127,6 @@ Hace años que me dedico a que la operación más importante de tu vida esté en
 CTA: Presentate en comentarios · DM abierto
 
 — GUION (30s, a cámara, luz cálida)
-
 0-4s: "Nadie sueña de chica con ser martillera. Yo tampoco. 😅"
 4-11s: "Llegué buscando lo que a mí me faltó cuando compré: que alguien me cuidara."
 11-18s: "Vi gente perder los ahorros de su vida por un mal consejo."
@@ -176,7 +173,6 @@ La respuesta no es igual para todos: depende de tus ahorros, tu laburo y tu hori
 CTA: DM "mi cuenta" · link en bio
 
 — GUION (25s, texto en pantalla + cifras — ACTUALIZAR los valores del mes)
-
 0-3s: "'¿Sigo alquilando o compro?' Los números 👇"
 3-9s: "Alquiler promedio 2 amb: $[ACTUALIZAR]/mes."
 9-15s: "En [X] años de alquiler pagaste [Y]… y la propiedad no es tuya."
