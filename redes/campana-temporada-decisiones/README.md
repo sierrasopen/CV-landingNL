@@ -27,3 +27,23 @@ ejemplo, se ajusta el estilo para que calce.
 ## Reutilizar para otros clientes
 Copiar esta carpeta como plantilla: `redes/campana-<cliente>/` con su `index.html` +
 `README.md`. Un dossier por campaña, una carpeta por cliente.
+
+## Pack de producción (`pack/`)
+- Una carpeta por post (`NN_semana_tema/`) con `slide_1..N.png` (carruseles) o `cover.png` (reels) + `caption.txt`.
+- `PLAN_captions.txt` — todos los captions, guiones y cronograma juntos.
+- `Calendario_TemporadaDeDecisiones.ics` — importar a Google Calendar para los 12 recordatorios (20:30 ART).
+- Estilo: sistema visual del post de referencia (@faceit_lab) adaptado a la identidad NLZ (crema + coral, serif). Voz argentina.
+- Portadas con foto usan `hero-natalia.jpg` como placeholder → reemplazar por la foto real.
+
+## Regenerar / editar
+`scripts/gen.js` define los 12 posts como datos y renderiza las placas con Playwright:
+```
+PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers node scripts/gen.js
+node scripts/build_doc.js   # arma PLAN_captions.txt
+node scripts/ics.js         # arma el .ics
+```
+Editar textos/estilo en `scripts/gen.js` (array `posts` y bloque `CSS`) y re-correr.
+
+## En Google Drive
+Carpeta **RR.SS NLZ STUDIO / Temporada de Decisiones — Set 2026**: Doc de captions+guiones y el `.ics`.
+Las imágenes se entregan por chat en `.zip` (subir a Buffer desde ahí).

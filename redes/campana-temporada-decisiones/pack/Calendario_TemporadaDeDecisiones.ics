@@ -1,0 +1,162 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NLZ Estudio//Temporada de Decisiones//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:01_valor_cuanto-vale@nlz-estudio
+DTSTAMP:20260911T225249Z
+DTSTART:20260916T233000Z
+DTEND:20260916T235959Z
+SUMMARY:📸 NLZ · ¿Cuánto vale de verdad tu casa? (Carrusel)
+DESCRIPTION:¿Cuánto vale de verdad tu casa?\nCarrusel · Semana 1 · Mar 16 sep · 20:30 hs\n\n— CAPTION —\nArranquemos por lo incómodo: el precio de tu casa no lo pone tu bolsillo. 🏠\nLo pone el mercado\, y hoy el mercado mira todo. En este carrusel te dejo los 4 factores que mueven el número de verdad.\n¿Querés saber en cuál está parada tu propiedad hoy? Escribime TASACIÓN por DM y te la hago sin cargo.\n\n#Córdoba #Inmobiliaria #Tasación #VenderMiCasa #NLZestudio\n\nCTA: DM "TASACIÓN"\n
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:Preparar post: ¿Cuánto vale de verdad tu casa?
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:02_valor_reel-senales@nlz-estudio
+DTSTAMP:20260911T225249Z
+DTSTART:20260918T233000Z
+DTEND:20260918T235959Z
+SUMMARY:📸 NLZ · 3 señales de que te tasaron mal (Reel)
+DESCRIPTION:3 señales de que te tasaron mal\nReel · Semana 1 · Jue 18 sep · 20:30 hs\n\n— CAPTION —\nUna tasación no es un número al azar: es un informe. 📋\nSi te dieron el valor sin ver la casa ni los papeles\, te dieron un chiste. Guardá esto para cuando decidas vender.\n\n#Tasación #Córdoba #TipsInmobiliarios #VenderPropiedad #NLZestudio\n\nCTA: Guardá + "agendá tu tasación" (link en bio)\n\n— GUION (20-30s\, a cámara + texto en pantalla)\n\n0-3s (gancho): "Si te tasaron así\, desconfiá 👇"\n3-9s: Señal 1 — "Te dieron el número por teléfono\, sin ver nada."\n9-15s: Señal 2 — "El precio es igual al del portal\, sin mirar tu caso."\n15-21s: Señal 3 — "Nadie te preguntó por los papeles."\n21-28s (cierre a cámara): "Una tasación seria mira la propiedad Y la carpeta. Agendá la tuya."\n
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:Preparar post: 3 señales de que te tasaron mal
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:03_valor_historia-menos@nlz-estudio
+DTSTAMP:20260911T225249Z
+DTSTART:20260920T233000Z
+DTEND:20260920T235959Z
+SUMMARY:📸 NLZ · Le dije que valía menos (y me lo agradeció) (Carrusel)
+DESCRIPTION:Le dije que valía menos (y me lo agradeció)\nCarrusel · Semana 1 · Sáb 20 sep · 20:30 hs\n\n— CAPTION —\nPrefiero perder una exclusiva antes que inflarte un precio que después te tiene 10 meses esperando. 🤝\nEsta operación se cerró porque empezamos por la verdad. Si querés que te diga el número real de tu propiedad —el que la vende— hablemos.\n\n#HistoriasDelOficio #Inmobiliaria #Córdoba #Confianza #NLZestudio\n\nCTA: DM "quiero mi número real"\n
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:Preparar post: Le dije que valía menos (y me lo agradeció)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:04_errores_5-errores@nlz-estudio
+DTSTAMP:20260911T225249Z
+DTSTART:20260923T233000Z
+DTEND:20260923T235959Z
+SUMMARY:📸 NLZ · 5 errores que te hacen perder plata al vender (Carrusel)
+DESCRIPTION:5 errores que te hacen perder plata al vender\nCarrusel · Semana 2 · Mar 23 sep · 20:30 hs\n\n— CAPTION —\nVender solo parece más barato… hasta el mes 6. 👀\nEstos 5 errores los veo todas las semanas. Guardá el post y mandáselo a ese conocido que "lo vende solo".\n\n#VenderMiCasa #ErroresComunes #Córdoba #Inmobiliaria #NLZestudio\n\nCTA: Guardá + compartí · DM "vendo"\n
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:Preparar post: 5 errores que te hacen perder plata al vender
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:05_errores_reel-mito@nlz-estudio
+DTSTAMP:20260911T225249Z
+DTSTART:20260925T233000Z
+DTEND:20260925T235959Z
+SUMMARY:📸 NLZ · El mito de "lo pongo caro y después bajo" (Reel)
+DESCRIPTION:El mito de "lo pongo caro y después bajo"\nReel · Semana 2 · Jue 25 sep · 20:30 hs\n\n— CAPTION —\nLa propiedad que baja de precio tres veces grita "algo tiene". 📉\nLa que sale a valor justo se vende en las primeras semanas\, cuando el interés está fresco. No es magia: es entender cómo mira quien compra.\n\n#MitosInmobiliarios #Córdoba #PrecioDeVenta #Inmobiliaria #NLZestudio\n\nCTA: Comentá "MITO" para la parte 2\n\n— GUION (25s\, a cámara)\n\n0-3s: "'Lo pongo caro y si no\, bajo.' Pará. 🚩"\n3-9s: "Una propiedad tiene un solo estreno: la primera semana."\n9-16s: "Cara\, nadie la mira. Y cuando bajás\, ya pasó de moda."\n16-22s: "Quien la ve después piensa: ¿por qué no se vendió?"\n22-25s (cierre): "Precio justo desde el día 1 = venta rápida. Es matemática."\n
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:Preparar post: El mito de "lo pongo caro y después bajo"
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:06_errores_checklist@nlz-estudio
+DTSTAMP:20260911T225249Z
+DTSTART:20260927T233000Z
+DTEND:20260927T235959Z
+SUMMARY:📸 NLZ · Tu primera propiedad: la checklist que nadie te da (Carrusel)
+DESCRIPTION:Tu primera propiedad: la checklist que nadie te da\nCarrusel · Semana 2 · Sáb 27 sep · 20:30 hs\n\n— CAPTION —\nComprar tu primera propiedad es emocionante… y ahí está el peligro. 💛\nEsta checklist te la deberían dar antes de la primera visita. Guardala para cuando salgas a buscar\, y si querés un ojo experto al lado\, escribime.\n\n#PrimeraPropiedad #ComprarEnCórdoba #Inmobiliaria #Checklist #NLZestudio\n\nCTA: Guardá · DM "quiero comprar"\n
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:Preparar post: Tu primera propiedad: la checklist que nadie te da
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:07_historia_operacion-dificil@nlz-estudio
+DTSTAMP:20260911T225249Z
+DTSTART:20260930T233000Z
+DTEND:20260930T235959Z
+SUMMARY:📸 NLZ · La operación más difícil que cerré (Carrusel)
+DESCRIPTION:La operación más difícil que cerré\nCarrusel · Semana 3 · Mar 30 sep · 20:30 hs\n\n— CAPTION —\nLa operación más difícil de mi carrera no se trabó por plata. Se trabó porque nadie quería sentir que perdía. 🤝\nA veces el oficio es 20% inmobiliaria y 80% escuchar. Te cuento cómo se destrabó.\n\n#HistoriasDelOficio #Martillera #Córdoba #Negociación #NLZestudio\n\nCTA: "¿Te pasó algo así? Contame 👇"\n
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:Preparar post: La operación más difícil que cerré
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:08_historia_reel-conoceme@nlz-estudio
+DTSTAMP:20260911T225249Z
+DTSTART:20261002T233000Z
+DTEND:20261002T235959Z
+SUMMARY:📸 NLZ · Por qué elegí este oficio (Reel)
+DESCRIPTION:Por qué elegí este oficio\nReel · Semana 3 · Jue 02 oct · 20:30 hs\n\n— CAPTION —\nNo soñaba con ser martillera. Soñaba con que comprar una casa no fuera una pesadilla. 💛\nHace años que me dedico a que la operación más importante de tu vida esté en buenas manos. Gracias por confiar.\n\n#Conoceme #Martillera #Córdoba #DetrásDeEscena #NLZestudio\n\nCTA: Presentate en comentarios · DM abierto\n\n— GUION (30s\, a cámara\, luz cálida)\n\n0-4s: "Nadie sueña de chica con ser martillera. Yo tampoco. 😅"\n4-11s: "Llegué buscando lo que a mí me faltó cuando compré: que alguien me cuidara."\n11-18s: "Vi gente perder los ahorros de su vida por un mal consejo."\n18-24s: "Y dije: esto se puede hacer bien\, con papeles y con respeto."\n24-30s (cierre): "Por eso hago esto. Y todavía me emociono en cada entrega de llaves. 🔑"\n
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:Preparar post: Por qué elegí este oficio
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:09_historia_venta-caida@nlz-estudio
+DTSTAMP:20260911T225249Z
+DTSTART:20261004T233000Z
+DTEND:20261004T235959Z
+SUMMARY:📸 NLZ · Lo que aprendí de una venta que se cayó (Carrusel)
+DESCRIPTION:Lo que aprendí de una venta que se cayó\nCarrusel · Semana 3 · Sáb 04 oct · 20:30 hs\n\n— CAPTION —\nSí\, se me cayó una venta a días de la escritura. Y fue la mejor lección de mi carrera. 📑\nHoy reviso cada carpeta como si fuera la mía\, porque una firma frustrada no se olvida. Los papeles al día no son burocracia: son que puedas festejar tranquila.\n\n#HistoriasDelOficio #SeguridadJurídica #Córdoba #Inmobiliaria #NLZestudio\n\nCTA: DM "¿mis papeles están en regla?"\n
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:Preparar post: Lo que aprendí de una venta que se cayó
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:10_jugada_usd100k@nlz-estudio
+DTSTAMP:20260911T225249Z
+DTSTART:20261007T233000Z
+DTEND:20261007T235959Z
+SUMMARY:📸 NLZ · Con USD 100.000\, ¿qué comprás en cada lugar? (Carrusel)
+DESCRIPTION:Con USD 100.000\, ¿qué comprás en cada lugar?\nCarrusel · Semana 4 · Mar 07 oct · 20:30 hs\n\n— CAPTION —\nEl mismo billete\, cuatro vidas distintas. 🌎\nEn Córdoba\, USD 100.000 todavía te dan metros\, luz y cochera — algo impensado en otras ciudades. Pero los ciclos se mueven. ¿Querés que te arme opciones reales con tu presupuesto? Escribime tu número por DM.\n\n#Córdoba #Inversión #DólarInmobiliario #ComprarEnCórdoba #NLZestudio\n\nCTA: DM con tu presupuesto\n
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:Preparar post: Con USD 100.000\, ¿qué comprás en cada lugar?
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:11_jugada_reel-comprar-alquilar@nlz-estudio
+DTSTAMP:20260911T225249Z
+DTSTART:20261009T233000Z
+DTEND:20261009T235959Z
+SUMMARY:📸 NLZ · ¿Compro o sigo alquilando? (Reel)
+DESCRIPTION:¿Compro o sigo alquilando?\nReel · Semana 4 · Jue 09 oct · 20:30 hs\n\n— CAPTION —\n"¿Compro o sigo alquilando?" es la pregunta del año. 🧮\nLa respuesta no es igual para todos: depende de tus ahorros\, tu laburo y tu horizonte. Pero los números ayudan a decidir con la cabeza y no con la ansiedad. ¿Te armo tu cuenta personalizada? DM.\n\n#ComprarVsAlquilar #Córdoba #FinanzasPersonales #Inmobiliaria #NLZestudio\n\nCTA: DM "mi cuenta" · link en bio\n\n— GUION (25s\, texto en pantalla + cifras — ACTUALIZAR los valores del mes)\n\n0-3s: "'¿Sigo alquilando o compro?' Los números 👇"\n3-9s: "Alquiler promedio 2 amb: $[ACTUALIZAR]/mes."\n9-15s: "En [X] años de alquiler pagaste [Y]… y la propiedad no es tuya."\n15-21s: "Comprar hoy: cuota vs. alquiler\, y el activo queda tuyo."\n21-25s (cierre): "No es para todos ni para siempre. Hagamos TU cuenta."\n
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:Preparar post: ¿Compro o sigo alquilando?
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:12_jugada_cierre@nlz-estudio
+DTSTAMP:20260911T225249Z
+DTSTART:20261011T233000Z
+DTEND:20261011T235959Z
+SUMMARY:📸 NLZ · Estás a un mensaje de decidir (Carrusel)
+DESCRIPTION:Estás a un mensaje de decidir\nCarrusel · Semana 4 · Sáb 11 oct · 20:30 hs\n\n— CAPTION —\nTodo el mes te hablé de valor\, errores\, historias y números. Ahora te toca a vos. 💛\nCerramos la Temporada de Decisiones con una invitación simple: escribime "DECIDO" y vemos juntos tu próximo paso —vender\, comprar o solo entender dónde estás parado. Sin humo\, sin compromiso.\n\n#DecidirConNLZ #Córdoba #Inmobiliaria #Tasación #NLZestudio\n\nCTA: DM "DECIDO" → agenda de tasación\n
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:Preparar post: Estás a un mensaje de decidir
+END:VALARM
+END:VEVENT
+END:VCALENDAR

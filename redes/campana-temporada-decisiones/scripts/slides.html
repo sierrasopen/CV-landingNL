@@ -1,0 +1,198 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,600;1,9..144,900&family=Archivo:wght@400;500;600;700;800&display=swap">
+<style>
+  :root{
+    --crema:#F4EFE6; --crema-2:#EAE3D5;
+    --verde:#1E3A31; --verde-2:#274A3E; --verde-d:#16281F;
+    --coral:#EF6A5B; --ink:#1E3A31;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0c1512;font-family:"Archivo",sans-serif;}
+  .board{position:relative;width:1080px;height:1350px;overflow:hidden;
+    display:flex;flex-direction:column;padding:96px 84px 92px;}
+  .cream{background:var(--crema);color:var(--ink);}
+  .count{position:absolute;top:40px;right:44px;z-index:6;background:var(--verde);color:var(--crema);
+    font-family:"Archivo";font-weight:700;font-size:26px;letter-spacing:.02em;
+    padding:12px 24px;border-radius:999px;}
+  .wm{position:absolute;top:40px;left:84px;z-index:6;font-family:"Archivo";font-weight:800;
+    font-size:24px;letter-spacing:.02em;color:var(--verde);opacity:.75;}
+  .wm b{color:var(--coral);}
+  .wm span{font-weight:600;letter-spacing:.24em;font-size:15px;opacity:.8;}
+
+  .small{font-family:"Archivo";font-weight:400;font-size:40px;line-height:1.35;color:#3a5449;}
+  .big{font-family:"Fraunces",Georgia,serif;font-weight:900;font-size:104px;line-height:1.0;
+    letter-spacing:-.02em;color:var(--verde);}
+  .big.coral{color:var(--coral);}
+  .lead{font-family:"Fraunces",serif;font-weight:900;font-size:88px;line-height:1.02;letter-spacing:-.02em;color:var(--verde);}
+  .list{font-family:"Archivo";font-weight:400;font-size:41px;line-height:1.62;color:#2b4137;}
+  .list b{font-weight:700;color:var(--verde);}
+  .push{margin-top:auto;}
+  .gap-s{height:34px;}.gap-m{height:52px;}.gap-l{height:74px;}
+
+  /* highlight boxes */
+  .boxdark{display:inline;background:var(--verde);color:var(--crema);
+    box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:.1em .32em;
+    font-family:"Fraunces",serif;font-weight:700;font-size:52px;line-height:1.5;letter-spacing:-.01em;}
+  .boxwhite{display:inline;background:#fff;color:var(--verde);
+    box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:.06em .28em;
+    font-family:"Fraunces",serif;font-weight:700;}
+  .boxcoral{display:inline-block;background:var(--coral);color:#fff;font-family:"Archivo";
+    font-weight:700;font-size:34px;letter-spacing:.01em;padding:12px 22px;border-radius:6px;}
+
+  /* label rows (S3) */
+  .rows{display:flex;flex-direction:column;gap:26px;}
+  .row{display:flex;align-items:center;gap:22px;font-family:"Archivo";font-weight:700;
+    text-transform:uppercase;letter-spacing:.06em;font-size:34px;color:var(--verde);}
+  .row .mid{background:var(--coral);color:#fff;padding:10px 24px;border-radius:6px;letter-spacing:.14em;}
+  .row .ar{color:var(--coral);font-weight:800;}
+
+  /* quote pairs (S5) */
+  .qp{display:flex;flex-direction:column;gap:30px;}
+  .qp .lbl{font-family:"Archivo";font-weight:700;text-transform:uppercase;letter-spacing:.16em;
+    font-size:24px;color:var(--coral);margin-bottom:8px;}
+  .qp .q{font-family:"Fraunces",serif;font-weight:700;font-size:52px;line-height:1.05;color:var(--verde);}
+
+  /* verbs (S6) */
+  .verbs{display:flex;flex-wrap:wrap;gap:16px;max-width:900px;}
+  .verbs span{background:var(--coral);color:#fff;font-family:"Archivo";font-weight:700;
+    font-size:36px;padding:12px 22px;border-radius:8px;}
+  .annot{font-family:"Fraunces",serif;font-style:italic;font-weight:600;font-size:44px;color:var(--coral);
+    align-self:flex-end;margin:22px 40px -6px 0;}
+
+  /* cover */
+  .cover{padding:0;}
+  .cover .photo{position:absolute;inset:0;background-size:cover;background-position:center 20%;}
+  .cover .grad{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,36,29,.15) 0%,rgba(20,36,29,0) 40%,rgba(20,36,29,.25) 100%);}
+  .cover .stack{position:absolute;left:70px;bottom:150px;z-index:5;display:flex;flex-direction:column;align-items:flex-start;gap:0;}
+  .cover .cb{background:#fff;color:var(--verde);font-family:"Fraunces",serif;font-weight:700;
+    font-size:58px;line-height:1.16;letter-spacing:-.01em;padding:8px 20px;box-decoration-break:clone;-webkit-box-decoration-break:clone;display:inline;}
+  .cover .cta{background:#fff;color:var(--coral);font-family:"Fraunces",serif;font-weight:700;
+    font-size:58px;padding:10px 20px;margin-top:12px;}
+  .cover .wm{color:#fff;opacity:.95;}
+  .cover .wm b{color:var(--coral);}
+
+  /* final verde slide */
+  .final{background:var(--verde);color:var(--crema);}
+  .final .count{background:var(--crema);color:var(--verde);}
+  .final .small{color:#cfdcd4;font-size:42px;line-height:1.34;}
+  .final .small b{color:#fff;font-weight:700;}
+  .final .big{color:var(--coral);}
+  .final .boxwhite{background:#fff;color:var(--verde);font-size:38px;padding:.18em .32em;font-family:"Archivo";font-weight:700;line-height:1.5;}
+  .final .brand{position:absolute;right:84px;bottom:70px;text-align:right;font-family:"Archivo";
+    font-weight:800;font-size:30px;color:#fff;letter-spacing:.02em;}
+  .final .brand b{color:var(--coral);}
+  .final .brand span{display:block;font-weight:600;font-size:20px;color:#aebfb5;letter-spacing:.1em;margin-top:4px;}
+</style></head>
+<body>
+<div id="deck">
+
+  <!-- 1 COVER -->
+  <div class="board cover">
+    <div class="photo" id="coverphoto"></div>
+    <div class="grad"></div>
+    <div class="wm">NL<b>Z</b> ESTUDIO</div>
+    <div class="count">1/7</div>
+    <div class="stack">
+      <span class="cb">Todos miran la comisión<br>de la inmobiliaria.</span>
+      <span class="cta">Pero no ven esto →</span>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="board cream">
+    <div class="wm">NL<b>Z</b> ESTUDIO</div><div class="count">2/7</div>
+    <div class="small">Y hay algo que casi nadie ve:</div>
+    <div class="gap-s"></div>
+    <div class="lead">También sostiene<br>personas y nervios.</div>
+    <div class="gap-m"></div>
+    <div class="list">
+      El que compra tiene miedo a equivocarse.<br>
+      El que vende quiere cerrar ya.<br>
+      Uno se arrepiente a mitad de camino.<br>
+      El otro necesita seguridad.
+    </div>
+    <div class="push"></div>
+    <div><span class="boxdark">Y la inmobiliaria banca<br>la operación igual.</span></div>
+  </div>
+
+  <!-- 3 -->
+  <div class="board cream">
+    <div class="wm">NL<b>Z</b> ESTUDIO</div><div class="count">3/7</div>
+    <div class="lead">Casi siempre está<br>en el medio de todo.</div>
+    <div class="gap-l"></div>
+    <div class="rows">
+      <div class="row">Comprador <span class="ar">↔</span> <span class="mid">NLZ</span> <span class="ar">↔</span> Vendedor</div>
+      <div class="row">Banco <span class="ar">↔</span> <span class="mid">NLZ</span> <span class="ar">↔</span> Escribanía</div>
+      <div class="row">Tasador <span class="ar">↔</span> <span class="mid">NLZ</span> <span class="ar">↔</span> Municipio</div>
+    </div>
+    <div class="push"></div>
+    <div class="list">Cada uno con su tiempo.<br>Su interés. Sus trámites. <b>Y sus urgencias.</b></div>
+  </div>
+
+  <!-- 4 -->
+  <div class="board cream">
+    <div class="wm">NL<b>Z</b> ESTUDIO</div><div class="count">4/7</div>
+    <div class="small">Hasta que un día:</div>
+    <div class="gap-s"></div>
+    <div class="big coral">Se firma.<br>Se paga.<br>Se entregan<br>las llaves.</div>
+    <div class="gap-m"></div>
+    <div class="small">Y de afuera parece que solo:</div>
+    <div class="gap-s"></div>
+    <div style="font-size:0"><span class="boxwhite" style="font-size:54px;line-height:1.35;padding:.08em .28em">«se vendió una propiedad».</span></div>
+    <div class="gap-s"></div>
+    <div class="list">Pero atrás hubo semanas —a veces meses— para llegar a ese momento.</div>
+  </div>
+
+  <!-- 5 -->
+  <div class="board cream">
+    <div class="wm">NL<b>Z</b> ESTUDIO</div><div class="count">5/7</div>
+    <div class="qp">
+      <div><div class="lbl">El banco</div><div class="q">«Falta una firma.»</div></div>
+      <div><div class="lbl">Quien compra</div><div class="q">«¿Por qué no cerramos?»</div></div>
+      <div><div class="lbl">Quien vende</div><div class="q">«Necesito una fecha.»</div></div>
+      <div><div class="lbl">La escribanía</div><div class="q">«Hay una observación.»</div></div>
+    </div>
+    <div class="push"></div>
+    <div class="small">Y todos giran hacia la misma persona:</div>
+    <div class="gap-s"></div>
+    <div class="big coral">La inmobiliaria.</div>
+  </div>
+
+  <!-- 6 -->
+  <div class="board cream">
+    <div class="wm">NL<b>Z</b> ESTUDIO</div><div class="count">6/7</div>
+    <div class="small">Mientras todos esperan una respuesta…</div>
+    <div class="gap-s"></div>
+    <div class="lead" style="font-size:64px">ella:</div>
+    <div class="gap-m"></div>
+    <div class="verbs">
+      <span>llama</span><span>junta papeles</span><span>aclara</span>
+      <span>negocia</span><span>coordina</span><span>hace seguimiento</span><span>resuelve…</span>
+    </div>
+    <div class="annot">y otra vez ↘</div>
+    <div class="push"></div>
+    <div class="big">Y vuelve a<br>empezar todo.</div>
+  </div>
+
+  <!-- 7 FINAL -->
+  <div class="board final">
+    <div class="wm" style="color:#fff">NL<b style="color:var(--coral)">Z</b> ESTUDIO</div><div class="count">7/7</div>
+    <div class="small">El trabajo de una inmobiliaria <b>sí</b> es abrir puertas.</div>
+    <div class="gap-s"></div>
+    <div class="small">Pero no solo las de una casa.</div>
+    <div class="gap-s"></div>
+    <div class="small">Arma los puentes entre personas, intereses y trámites para que la operación llegue a buen puerto.</div>
+    <div class="gap-l"></div>
+    <div class="big">Tu inmobiliaria<br>hace que pase.</div>
+    <div class="gap-l"></div>
+    <div><span class="boxwhite">Guardalo o compartilo si esto también te representa.</span></div>
+    <div class="brand">NL<b>Z</b> ESTUDIO<span>@NATI_LUQUEZAMPIERI · CÓRDOBA</span></div>
+  </div>
+
+</div>
+<script>
+  document.getElementById('coverphoto').style.backgroundImage = "url('" + window.__COVER__ + "')";
+</script>
+</body></html>
