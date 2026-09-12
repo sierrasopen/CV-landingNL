@@ -22,7 +22,7 @@ const posts = [
   caption:`Arranquemos por lo incómodo: el precio de tu casa no lo pone tu bolsillo. 🏠\nLo pone el mercado, y hoy el mercado mira todo. En este carrusel te dejo los 4 factores que mueven el número de verdad.\n¿Querés saber en cuál está parada tu propiedad hoy? Escribime TASACIÓN por DM y te la hago sin cargo.`,
   tags:'#Córdoba #Inmobiliaria #Tasación #VenderMiCasa #NLZestudio', cta:'DM "TASACIÓN"',
   slides:[
-    {t:'coverphoto', photo:CASITA, pos:'center 28%', box:['Le pusiste precio','a tu casa.'], cta:'Pero… ¿es el real? →'},
+    {t:'coverphoto', photo:CASITA, pos:'center 28%', num:'1', label:'Valor', title:['¿Cuánto vale','tu casa?']},
     {t:'lead', pre:'Arranquemos por lo incómodo:', big:['El precio no lo','pone tu bolsillo.'], list:['Ni lo que pagaste.','Ni lo que necesitás.','Ni lo que dice el vecino.'], darkbox:'Lo pone el mercado. Y hoy mira todo.'},
     {t:'boxes', pre:'Cuatro cosas mueven el número:', items:['Ubicación real','Estado y mantenimiento','Papeles al día','El momento del mercado']},
     {t:'bigwhite', pre:'Y ojo con esto:', big:['Publicar caro'], color:'coral', whitebox:'= meses sin vender.', list:['El estreno es una sola vez.','Después la casa "ya está vista".']},
@@ -42,7 +42,7 @@ const posts = [
   caption:`Prefiero perder una exclusiva antes que inflarte un precio que después te tiene 10 meses esperando. 🤝\nEsta operación se cerró porque empezamos por la verdad. Si querés que te diga el número real de tu propiedad —el que la vende— hablemos.`,
   tags:'#HistoriasDelOficio #Inmobiliaria #Córdoba #Confianza #NLZestudio', cta:'DM "quiero mi número real"',
   slides:[
-    {t:'coverphoto', photo:BALANZA, pos:'center 18%', box:['Le dije que su casa','valía menos.'], cta:'Y me lo agradeció →'},
+    {t:'coverphoto', photo:BALANZA, pos:'center 18%', num:'3', label:'Historia', title:['Le dije que','valía menos']},
     {t:'lead', pre:'Tenía en la mano', big:['otra tasación','inflada.'], darkbox:'Alguien le prometió más para quedarse con la exclusiva.'},
     {t:'quotes', pairs:[{lbl:'El otro tasador',q:'«Poné más, después bajás.»'},{lbl:'Yo',q:'«Pongamos el número real.»'}], post:'Le mostré los comparables de su cuadra.', big:['La cara','le cambió.'], color:'coral'},
     {t:'lead', pre:'Ajustamos el precio con criterio,', big:['no con','miedo.'], list:['Sin inflarlo.','Sin regalarlo.']},
@@ -55,7 +55,7 @@ const posts = [
   caption:`Vender solo parece más barato… hasta el mes 6. 👀\nEstos 5 errores los veo todas las semanas. Guardá el post y mandáselo a ese conocido que "lo vende solo".`,
   tags:'#VenderMiCasa #ErroresComunes #Córdoba #Inmobiliaria #NLZestudio', cta:'Guardá + compartí · DM "vendo"',
   slides:[
-    {t:'coverphoto', photo:PROP, pos:'center 30%', box:['Vender solo','parece más barato.'], cta:'Hasta que ves esto →'},
+    {t:'coverphoto', photo:PROP, pos:'center 30%', num:'4', label:'Educación', title:['5 errores','al vender']},
     {t:'lead', pre:'Los que veo todas las semanas:', big:['5 errores que','cuestan plata.']},
     {t:'verbs', pre:'Anotá:', lead:['Los 5:'], items:['Precio inflado','Fotos malas','Sin estrategia','Papeles a medias','Marcar defectos'], big:['¿Te suena','alguno?']},
     {t:'bigwhite', pre:'El más caro de todos:', big:['Publicar caro'], color:'coral', whitebox:'y bajar de a poco.', list:['La propiedad se "quema" en los portales.','Y el que mira piensa: algo tiene.']},
@@ -75,7 +75,7 @@ const posts = [
   caption:`Comprar tu primera propiedad es emocionante… y ahí está el peligro. 💛\nEsta checklist te la deberían dar antes de la primera visita. Guardala para cuando salgas a buscar, y si querés un ojo experto al lado, escribime.`,
   tags:'#PrimeraPropiedad #ComprarEnCórdoba #Inmobiliaria #Checklist #NLZestudio', cta:'Guardá · DM "quiero comprar"',
   slides:[
-    {t:'coverphoto', photo:PROP, pos:'center 60%', box:['Comprás tu','primera propiedad.'], cta:'Guardá esta checklist →'},
+    {t:'coverphoto', photo:PROP, pos:'center 60%', num:'6', label:'Compradores', title:['Tu primera','propiedad']},
     {t:'lead', pre:'Antes de enamorarte de una casa:', big:['Presupuesto','real.'], darkbox:'Sumá gastos de escritura, sellos e impuestos.'},
     {t:'rows', pre:'Pedí y verificá siempre:', rows:[['Matrícula','✓','titularidad'],['Deudas','✓','muni + rentas'],['Planos','✓','aprobados']], post:'Si algo no está, se frena en la firma.'},
     {t:'lead', pre:'Visitá dos veces:', big:['de día','y de noche.'], list:['Ruido, humedad, luz, vecinos.']},
@@ -88,7 +88,7 @@ const posts = [
   caption:`La operación más difícil de mi carrera no se trabó por plata. Se trabó porque nadie quería sentir que perdía. 🤝\nA veces el oficio es 20% inmobiliaria y 80% escuchar. Te cuento cómo se destrabó.`,
   tags:'#HistoriasDelOficio #Martillera #Córdoba #Negociación #NLZestudio', cta:'"¿Te pasó algo así? Contame 👇"',
   slides:[
-    {t:'coverphoto', photo:HERO, box:['La operación más','difícil que cerré.'], cta:'No se trabó por la plata →'},
+    {t:'coverphoto', photo:HERO, pos:'center 25%', num:'7', label:'Negociación', title:['La operación','más difícil']},
     {t:'lead', pre:'Ninguno quería ceder.', big:['Uno sentía que','bajar era perder.'], darkbox:'El otro, que aceptar era quedar en desventaja.'},
     {t:'quotes', pairs:[{lbl:'El comprador',q:'«Que baje él primero.»'},{lbl:'El vendedor',q:'«No regalo mi casa.»'}], post:'El problema no era el precio.', big:['Era el orgullo','de dos familias.'], color:'coral'},
     {t:'lead', pre:'Dejé los números de lado', big:['y escuché de qué','tenían miedo.'], darkbox:'Cuando cada uno se sintió respetado, apareció el acuerdo.'},
@@ -108,7 +108,7 @@ const posts = [
   caption:`Sí, se me cayó una venta a días de la escritura. Y fue la mejor lección de mi carrera. 📑\nHoy reviso cada carpeta como si fuera la mía, porque una firma frustrada no se olvida. Los papeles al día no son burocracia: son que puedas festejar tranquila.`,
   tags:'#HistoriasDelOficio #SeguridadJurídica #Córdoba #Inmobiliaria #NLZestudio', cta:'DM "¿mis papeles están en regla?"',
   slides:[
-    {t:'coverphoto', photo:HERO, box:['Se me cayó una venta','a días de la firma.'], cta:'La mejor lección de mi carrera →'},
+    {t:'coverphoto', photo:HERO, pos:'center 25%', num:'9', label:'Papeles', title:['La venta','que se cayó']},
     {t:'lead', pre:'A último momento', big:['apareció una','deuda oculta.'], darkbox:'Nadie la había declarado.'},
     {t:'bigwhite', big:['El comprador'], color:'coral', whitebox:'se bajó.', list:['Me dolió como si fuera mi propia casa.']},
     {t:'lead', pre:'Desde ese día,', big:['ninguna carpeta','avanza a medias.'], color:'coral'},
@@ -191,13 +191,15 @@ body{background:#0c1512;font-family:"Archivo",sans-serif}
 .verbs{display:flex;flex-wrap:wrap;gap:16px;max-width:900px;margin-top:8px}
 .verbs span{background:var(--coral);color:#fff;font-weight:700;font-size:36px;padding:12px 22px;border-radius:8px}
 .annot{font-family:"Fraunces",serif;font-style:italic;font-weight:600;font-size:44px;color:var(--coral);align-self:flex-end;margin:20px 30px -4px 0}
-/* cover foto */
+/* cover foto — estilo grilla: número + título serif + etiqueta + subrayado coral */
 .cover{padding:0}
 .cover .photo{position:absolute;inset:0;background-size:cover;background-position:center 20%}
-.cover .grad{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,36,29,.14) 0%,rgba(20,36,29,0) 42%,rgba(20,36,29,.30) 100%)}
-.cover .stack{position:absolute;left:70px;bottom:150px;z-index:5;display:flex;flex-direction:column;align-items:flex-start}
-.cover .cb{background:#fff;color:var(--verde);font-family:"Fraunces",serif;font-weight:700;font-size:58px;line-height:1.16;padding:8px 20px;box-decoration-break:clone;-webkit-box-decoration-break:clone;display:inline}
-.cover .cta{background:#fff;color:var(--coral);font-family:"Fraunces",serif;font-weight:700;font-size:50px;padding:10px 20px;margin-top:12px}
+.cover .grad{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,36,29,.28) 0%,rgba(20,36,29,0) 34%,rgba(18,32,25,.55) 60%,rgba(12,22,17,.94) 100%)}
+.cover .block{position:absolute;left:90px;right:90px;bottom:120px;z-index:5}
+.cover .cnum{font-family:"Fraunces",serif;font-weight:900;font-size:70px;line-height:.8;color:var(--coral)}
+.cover .ctitle{font-family:"Fraunces",serif;font-weight:900;font-size:100px;line-height:1.0;letter-spacing:-.02em;color:#fff;margin-top:18px}
+.cover .clabel{font-family:"Archivo",sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.24em;font-size:30px;color:#eef2ee;margin-top:30px}
+.cover .cbar{width:96px;height:7px;background:var(--coral);border-radius:4px;margin-top:18px}
 .cover .wm{color:#fff}.cover .wm b{color:var(--coral)}
 /* covertext */
 .covertext{justify-content:center}.covertext .big{font-size:110px}
@@ -224,7 +226,11 @@ function slideHTML(s, i, n){
 
   if(s.t==='coverphoto') return `<div class="board cover">
     <div class="photo" style="background-image:url('${s.photo||COVER}');${s.pos?'background-position:'+s.pos:''}"></div><div class="grad"></div>${wm}${cnt}
-    <div class="stack"><span class="cb">${L(s.box)}</span><span class="cta">${H(s.cta)}</span></div></div>`;
+    <div class="block">
+      <div class="cnum">${H(s.num)}.</div>
+      <div class="ctitle">${L(s.title)}</div>
+      <div class="clabel">${H(s.label)}</div><div class="cbar"></div>
+    </div></div>`;
 
   if(s.t==='covertext') return `<div class="board cream covertext">${wm}${cnt}
     ${s.kicker?`<div class="kicker">${H(s.kicker)}</div>`:''}
