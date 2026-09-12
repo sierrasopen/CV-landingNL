@@ -8,6 +8,8 @@ const BASE = '/tmp/claude-0/-home-user-CV-landingNL/bd6c1c29-401b-5436-becd-1992
 const OUT = BASE + '/pack';
 const HERO = 'file:///home/user/CV-landingNL/redes/campana-temporada-decisiones/assets/retrato-natalia.jpg';
 const PROP = 'file:///home/user/CV-landingNL/redes/campana-temporada-decisiones/assets/valle-del-golf.webp';
+const CASITA = 'file:///home/user/CV-landingNL/redes/campana-temporada-decisiones/assets/retrato-casita.png';
+const BALANZA = 'file:///home/user/CV-landingNL/redes/campana-temporada-decisiones/assets/retrato-balanza.png';
 const COVER = HERO;
 
 const H = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
@@ -20,7 +22,7 @@ const posts = [
   caption:`Arranquemos por lo incómodo: el precio de tu casa no lo pone tu bolsillo. 🏠\nLo pone el mercado, y hoy el mercado mira todo. En este carrusel te dejo los 4 factores que mueven el número de verdad.\n¿Querés saber en cuál está parada tu propiedad hoy? Escribime TASACIÓN por DM y te la hago sin cargo.`,
   tags:'#Córdoba #Inmobiliaria #Tasación #VenderMiCasa #NLZestudio', cta:'DM "TASACIÓN"',
   slides:[
-    {t:'coverphoto', photo:PROP, pos:'center 45%', box:['Le pusiste precio','a tu casa.'], cta:'Pero… ¿es el real? →'},
+    {t:'coverphoto', photo:CASITA, pos:'center 28%', box:['Le pusiste precio','a tu casa.'], cta:'Pero… ¿es el real? →'},
     {t:'lead', pre:'Arranquemos por lo incómodo:', big:['El precio no lo','pone tu bolsillo.'], list:['Ni lo que pagaste.','Ni lo que necesitás.','Ni lo que dice el vecino.'], darkbox:'Lo pone el mercado. Y hoy mira todo.'},
     {t:'boxes', pre:'Cuatro cosas mueven el número:', items:['Ubicación real','Estado y mantenimiento','Papeles al día','El momento del mercado']},
     {t:'bigwhite', pre:'Y ojo con esto:', big:['Publicar caro'], color:'coral', whitebox:'= meses sin vender.', list:['El estreno es una sola vez.','Después la casa "ya está vista".']},
@@ -40,7 +42,7 @@ const posts = [
   caption:`Prefiero perder una exclusiva antes que inflarte un precio que después te tiene 10 meses esperando. 🤝\nEsta operación se cerró porque empezamos por la verdad. Si querés que te diga el número real de tu propiedad —el que la vende— hablemos.`,
   tags:'#HistoriasDelOficio #Inmobiliaria #Córdoba #Confianza #NLZestudio', cta:'DM "quiero mi número real"',
   slides:[
-    {t:'coverphoto', photo:HERO, box:['Le dije que su casa','valía menos.'], cta:'Y me lo agradeció →'},
+    {t:'coverphoto', photo:BALANZA, pos:'center 18%', box:['Le dije que su casa','valía menos.'], cta:'Y me lo agradeció →'},
     {t:'lead', pre:'Tenía en la mano', big:['otra tasación','inflada.'], darkbox:'Alguien le prometió más para quedarse con la exclusiva.'},
     {t:'quotes', pairs:[{lbl:'El otro tasador',q:'«Poné más, después bajás.»'},{lbl:'Yo',q:'«Pongamos el número real.»'}], post:'Le mostré los comparables de su cuadra.', big:['La cara','le cambió.'], color:'coral'},
     {t:'lead', pre:'Ajustamos el precio con criterio,', big:['no con','miedo.'], list:['Sin inflarlo.','Sin regalarlo.']},
@@ -301,7 +303,9 @@ function captionFile(p){
     const dir = path.join(OUT, p.id);
     fs.mkdirSync(dir, {recursive:true});
     fs.writeFileSync(path.join(dir,'caption.txt'), captionFile(p));
-    await page.setContent(docFor(p), {waitUntil:'load'});
+    const tmp = BASE + '/_render_tmp.html';
+    fs.writeFileSync(tmp, docFor(p));
+    await page.goto('file://' + tmp, {waitUntil:'load'});
     try{ await page.waitForLoadState('networkidle',{timeout:8000}); }catch(e){}
     try{ await page.evaluate(()=>document.fonts.ready); }catch(e){}
     await page.waitForTimeout(400);
