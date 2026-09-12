@@ -6,7 +6,9 @@ const path = require('path');
 
 const BASE = '/tmp/claude-0/-home-user-CV-landingNL/bd6c1c29-401b-5436-becd-1992d4055ec1/scratchpad';
 const OUT = BASE + '/pack';
-const COVER = 'file:///home/user/CV-landingNL/hero-natalia.jpg';
+const HERO = 'file:///home/user/CV-landingNL/redes/campana-temporada-decisiones/assets/retrato-natalia.jpg';
+const PROP = 'file:///home/user/CV-landingNL/redes/campana-temporada-decisiones/assets/valle-del-golf.webp';
+const COVER = HERO;
 
 const H = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 const L = arr => (arr||[]).map(H).join('<br>');
@@ -18,7 +20,7 @@ const posts = [
   caption:`Arranquemos por lo incómodo: el precio de tu casa no lo pone tu bolsillo. 🏠\nLo pone el mercado, y hoy el mercado mira todo. En este carrusel te dejo los 4 factores que mueven el número de verdad.\n¿Querés saber en cuál está parada tu propiedad hoy? Escribime TASACIÓN por DM y te la hago sin cargo.`,
   tags:'#Córdoba #Inmobiliaria #Tasación #VenderMiCasa #NLZestudio', cta:'DM "TASACIÓN"',
   slides:[
-    {t:'coverphoto', box:['Le pusiste precio','a tu casa.'], cta:'Pero… ¿es el real? →'},
+    {t:'coverphoto', photo:PROP, pos:'center 45%', box:['Le pusiste precio','a tu casa.'], cta:'Pero… ¿es el real? →'},
     {t:'lead', pre:'Arranquemos por lo incómodo:', big:['El precio no lo','pone tu bolsillo.'], list:['Ni lo que pagaste.','Ni lo que necesitás.','Ni lo que dice el vecino.'], darkbox:'Lo pone el mercado. Y hoy mira todo.'},
     {t:'boxes', pre:'Cuatro cosas mueven el número:', items:['Ubicación real','Estado y mantenimiento','Papeles al día','El momento del mercado']},
     {t:'bigwhite', pre:'Y ojo con esto:', big:['Publicar caro'], color:'coral', whitebox:'= meses sin vender.', list:['El estreno es una sola vez.','Después la casa "ya está vista".']},
@@ -38,7 +40,7 @@ const posts = [
   caption:`Prefiero perder una exclusiva antes que inflarte un precio que después te tiene 10 meses esperando. 🤝\nEsta operación se cerró porque empezamos por la verdad. Si querés que te diga el número real de tu propiedad —el que la vende— hablemos.`,
   tags:'#HistoriasDelOficio #Inmobiliaria #Córdoba #Confianza #NLZestudio', cta:'DM "quiero mi número real"',
   slides:[
-    {t:'coverphoto', box:['Le dije que su casa','valía menos.'], cta:'Y me lo agradeció →'},
+    {t:'coverphoto', photo:HERO, box:['Le dije que su casa','valía menos.'], cta:'Y me lo agradeció →'},
     {t:'lead', pre:'Tenía en la mano', big:['otra tasación','inflada.'], darkbox:'Alguien le prometió más para quedarse con la exclusiva.'},
     {t:'quotes', pairs:[{lbl:'El otro tasador',q:'«Poné más, después bajás.»'},{lbl:'Yo',q:'«Pongamos el número real.»'}], post:'Le mostré los comparables de su cuadra.', big:['La cara','le cambió.'], color:'coral'},
     {t:'lead', pre:'Ajustamos el precio con criterio,', big:['no con','miedo.'], list:['Sin inflarlo.','Sin regalarlo.']},
@@ -51,7 +53,7 @@ const posts = [
   caption:`Vender solo parece más barato… hasta el mes 6. 👀\nEstos 5 errores los veo todas las semanas. Guardá el post y mandáselo a ese conocido que "lo vende solo".`,
   tags:'#VenderMiCasa #ErroresComunes #Córdoba #Inmobiliaria #NLZestudio', cta:'Guardá + compartí · DM "vendo"',
   slides:[
-    {t:'coverphoto', box:['Vender solo','parece más barato.'], cta:'Hasta que ves esto →'},
+    {t:'coverphoto', photo:PROP, pos:'center 30%', box:['Vender solo','parece más barato.'], cta:'Hasta que ves esto →'},
     {t:'lead', pre:'Los que veo todas las semanas:', big:['5 errores que','cuestan plata.']},
     {t:'verbs', pre:'Anotá:', lead:['Los 5:'], items:['Precio inflado','Fotos malas','Sin estrategia','Papeles a medias','Marcar defectos'], big:['¿Te suena','alguno?']},
     {t:'bigwhite', pre:'El más caro de todos:', big:['Publicar caro'], color:'coral', whitebox:'y bajar de a poco.', list:['La propiedad se "quema" en los portales.','Y el que mira piensa: algo tiene.']},
@@ -71,7 +73,7 @@ const posts = [
   caption:`Comprar tu primera propiedad es emocionante… y ahí está el peligro. 💛\nEsta checklist te la deberían dar antes de la primera visita. Guardala para cuando salgas a buscar, y si querés un ojo experto al lado, escribime.`,
   tags:'#PrimeraPropiedad #ComprarEnCórdoba #Inmobiliaria #Checklist #NLZestudio', cta:'Guardá · DM "quiero comprar"',
   slides:[
-    {t:'coverphoto', box:['Comprás tu','primera propiedad.'], cta:'Guardá esta checklist →'},
+    {t:'coverphoto', photo:PROP, pos:'center 60%', box:['Comprás tu','primera propiedad.'], cta:'Guardá esta checklist →'},
     {t:'lead', pre:'Antes de enamorarte de una casa:', big:['Presupuesto','real.'], darkbox:'Sumá gastos de escritura, sellos e impuestos.'},
     {t:'rows', pre:'Pedí y verificá siempre:', rows:[['Matrícula','✓','titularidad'],['Deudas','✓','muni + rentas'],['Planos','✓','aprobados']], post:'Si algo no está, se frena en la firma.'},
     {t:'lead', pre:'Visitá dos veces:', big:['de día','y de noche.'], list:['Ruido, humedad, luz, vecinos.']},
@@ -84,7 +86,7 @@ const posts = [
   caption:`La operación más difícil de mi carrera no se trabó por plata. Se trabó porque nadie quería sentir que perdía. 🤝\nA veces el oficio es 20% inmobiliaria y 80% escuchar. Te cuento cómo se destrabó.`,
   tags:'#HistoriasDelOficio #Martillera #Córdoba #Negociación #NLZestudio', cta:'"¿Te pasó algo así? Contame 👇"',
   slides:[
-    {t:'coverphoto', box:['La operación más','difícil que cerré.'], cta:'No se trabó por la plata →'},
+    {t:'coverphoto', photo:HERO, box:['La operación más','difícil que cerré.'], cta:'No se trabó por la plata →'},
     {t:'lead', pre:'Ninguno quería ceder.', big:['Uno sentía que','bajar era perder.'], darkbox:'El otro, que aceptar era quedar en desventaja.'},
     {t:'quotes', pairs:[{lbl:'El comprador',q:'«Que baje él primero.»'},{lbl:'El vendedor',q:'«No regalo mi casa.»'}], post:'El problema no era el precio.', big:['Era el orgullo','de dos familias.'], color:'coral'},
     {t:'lead', pre:'Dejé los números de lado', big:['y escuché de qué','tenían miedo.'], darkbox:'Cuando cada uno se sintió respetado, apareció el acuerdo.'},
@@ -104,7 +106,7 @@ const posts = [
   caption:`Sí, se me cayó una venta a días de la escritura. Y fue la mejor lección de mi carrera. 📑\nHoy reviso cada carpeta como si fuera la mía, porque una firma frustrada no se olvida. Los papeles al día no son burocracia: son que puedas festejar tranquila.`,
   tags:'#HistoriasDelOficio #SeguridadJurídica #Córdoba #Inmobiliaria #NLZestudio', cta:'DM "¿mis papeles están en regla?"',
   slides:[
-    {t:'coverphoto', box:['Se me cayó una venta','a días de la firma.'], cta:'La mejor lección de mi carrera →'},
+    {t:'coverphoto', photo:HERO, box:['Se me cayó una venta','a días de la firma.'], cta:'La mejor lección de mi carrera →'},
     {t:'lead', pre:'A último momento', big:['apareció una','deuda oculta.'], darkbox:'Nadie la había declarado.'},
     {t:'bigwhite', big:['El comprador'], color:'coral', whitebox:'se bajó.', list:['Me dolió como si fuera mi propia casa.']},
     {t:'lead', pre:'Desde ese día,', big:['ninguna carpeta','avanza a medias.'], color:'coral'},
@@ -219,7 +221,7 @@ function slideHTML(s, i, n){
   const lc = s.color==='coral' ? 'lead coral' : 'lead';
 
   if(s.t==='coverphoto') return `<div class="board cover">
-    <div class="photo" style="background-image:url('${COVER}')"></div><div class="grad"></div>${wm}${cnt}
+    <div class="photo" style="background-image:url('${s.photo||COVER}');${s.pos?'background-position:'+s.pos:''}"></div><div class="grad"></div>${wm}${cnt}
     <div class="stack"><span class="cb">${L(s.box)}</span><span class="cta">${H(s.cta)}</span></div></div>`;
 
   if(s.t==='covertext') return `<div class="board cream covertext">${wm}${cnt}
@@ -294,7 +296,7 @@ function captionFile(p){
   fs.rmSync(OUT, {recursive:true, force:true});
   fs.mkdirSync(OUT, {recursive:true});
   const browser = await chromium.launch();
-  const page = await browser.newPage({viewport:{width:1080,height:1350}, deviceScaleFactor:1});
+  const page = await browser.newPage({viewport:{width:1080,height:1350}, deviceScaleFactor:2});
   for(const p of posts){
     const dir = path.join(OUT, p.id);
     fs.mkdirSync(dir, {recursive:true});
