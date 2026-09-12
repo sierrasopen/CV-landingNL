@@ -89,7 +89,7 @@ const posts = [
   caption:`La operación más difícil de mi carrera no se trabó por plata. Se trabó porque nadie quería sentir que perdía. 🤝\nA veces el oficio es 20% inmobiliaria y 80% escuchar. Te cuento cómo se destrabó.`,
   tags:'#HistoriasDelOficio #Martillera #Córdoba #Negociación #NLZestudio', cta:'"¿Te pasó algo así? Contame 👇"',
   slides:[
-    {t:'coverphoto', photo:HERO, pos:'center 25%', num:'7', label:'Negociación', title:['La operación','más difícil']},
+    {t:'coverphoto', photo:BALANZA, pos:'center 18%', num:'7', label:'Negociación', title:['La operación','más difícil']},
     {t:'lead', pre:'Ninguno quería ceder.', big:['Uno sentía que','bajar era perder.'], darkbox:'El otro, que aceptar era quedar en desventaja.'},
     {t:'quotes', pairs:[{lbl:'El comprador',q:'«Que baje él primero.»'},{lbl:'El vendedor',q:'«No regalo mi casa.»'}], post:'El problema no era el precio.', big:['Era el orgullo','de dos familias.'], color:'coral'},
     {t:'lead', pre:'Dejé los números de lado', big:['y escuché de qué','tenían miedo.'], darkbox:'Cuando cada uno se sintió respetado, apareció el acuerdo.'},
@@ -109,7 +109,7 @@ const posts = [
   caption:`Sí, se me cayó una venta a días de la escritura. Y fue la mejor lección de mi carrera. 📑\nHoy reviso cada carpeta como si fuera la mía, porque una firma frustrada no se olvida. Los papeles al día no son burocracia: son que puedas festejar tranquila.`,
   tags:'#HistoriasDelOficio #SeguridadJurídica #Córdoba #Inmobiliaria #NLZestudio', cta:'DM "¿mis papeles están en regla?"',
   slides:[
-    {t:'coverphoto', photo:HERO, pos:'center 25%', num:'9', label:'Papeles', title:['La venta','que se cayó']},
+    {t:'coverphoto', photo:CASITA, pos:'center 28%', num:'9', label:'Papeles', title:['La venta','que se cayó']},
     {t:'lead', pre:'A último momento', big:['apareció una','deuda oculta.'], darkbox:'Nadie la había declarado.'},
     {t:'bigwhite', big:['El comprador'], color:'coral', whitebox:'se bajó.', list:['Me dolió como si fuera mi propia casa.']},
     {t:'lead', pre:'Desde ese día,', big:['ninguna carpeta','avanza a medias.'], color:'coral'},
