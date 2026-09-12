@@ -6,6 +6,7 @@ const path = require('path');
 
 const BASE = '/tmp/claude-0/-home-user-CV-landingNL/bd6c1c29-401b-5436-becd-1992d4055ec1/scratchpad';
 const OUT = BASE + '/pack';
+const FONTS = fs.readFileSync(BASE + '/fonts_inline.css','utf8');
 const HERO = 'file:///home/user/CV-landingNL/redes/campana-temporada-decisiones/assets/retrato-natalia.jpg';
 const PROP = 'file:///home/user/CV-landingNL/redes/campana-temporada-decisiones/assets/valle-del-golf.webp';
 const CASITA = 'file:///home/user/CV-landingNL/redes/campana-temporada-decisiones/assets/retrato-casita.png';
@@ -160,9 +161,9 @@ body{background:#0c1512;font-family:"Archivo",sans-serif}
 .wm{position:absolute;top:40px;left:84px;z-index:6;font-weight:800;font-size:24px;color:var(--verde);opacity:.75}
 .wm b{color:var(--coral)}
 .small{font-weight:400;font-size:40px;line-height:1.35;color:#3a5449}
-.big{font-family:"Fraunces",Georgia,serif;font-weight:900;font-size:96px;line-height:1.0;letter-spacing:-.02em;color:var(--verde)}
+.big{font-family:"Space Grotesk",Georgia,serif;font-weight:700;font-size:96px;line-height:1.0;letter-spacing:-.02em;color:var(--verde)}
 .big.coral{color:var(--coral)}
-.lead{font-family:"Fraunces",serif;font-weight:900;font-size:84px;line-height:1.02;letter-spacing:-.02em;color:var(--verde)}
+.lead{font-family:"Space Grotesk",serif;font-weight:700;font-size:84px;line-height:1.02;letter-spacing:-.02em;color:var(--verde)}
 .lead.coral{color:var(--coral)}
 .post{margin-top:26px}
 .push{margin-top:auto}
@@ -171,13 +172,13 @@ body{background:#0c1512;font-family:"Archivo",sans-serif}
 .kicker{font-weight:700;text-transform:uppercase;letter-spacing:.22em;font-size:28px;color:var(--coral);margin-bottom:28px}
 /* boxes verdes (3ro coral) */
 .boxes{display:flex;flex-direction:column;gap:20px;align-items:flex-start;margin-top:10px}
-.boxes span{background:var(--verde);color:var(--crema);font-family:"Fraunces",serif;font-weight:700;font-size:50px;padding:12px 26px;border-radius:8px}
+.boxes span{background:var(--verde);color:var(--crema);font-family:"Space Grotesk",serif;font-weight:700;font-size:50px;padding:12px 26px;border-radius:8px}
 .boxes span:nth-child(3){background:var(--coral);color:#fff}
 .pre{font-weight:400;font-size:40px;line-height:1.35;color:#3a5449;margin-bottom:26px}
 /* caja verde de remate */
-.darkbox{display:inline;background:var(--verde);color:var(--crema);box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:.12em .32em;font-family:"Fraunces",serif;font-weight:700;font-size:50px;line-height:1.5;}
+.darkbox{display:inline;background:var(--verde);color:var(--crema);box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:.12em .32em;font-family:"Space Grotesk",serif;font-weight:700;font-size:50px;line-height:1.5;}
 /* caja blanca inline */
-.whitebox{display:inline;background:#fff;color:var(--verde);box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:.06em .28em;font-family:"Fraunces",serif;font-weight:700;font-size:66px;line-height:1.35;}
+.whitebox{display:inline;background:#fff;color:var(--verde);box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:.06em .28em;font-family:"Space Grotesk",serif;font-weight:700;font-size:66px;line-height:1.35;}
 /* filas con flecha */
 .rows{display:flex;flex-direction:column;gap:26px;margin-top:8px}
 .row{display:flex;align-items:center;gap:20px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:34px;color:var(--verde)}
@@ -186,18 +187,18 @@ body{background:#0c1512;font-family:"Archivo",sans-serif}
 /* pares de cita */
 .qp{display:flex;flex-direction:column;gap:30px;margin-top:6px}
 .qp .lbl{font-weight:700;text-transform:uppercase;letter-spacing:.16em;font-size:24px;color:var(--coral);margin-bottom:8px}
-.qp .q{font-family:"Fraunces",serif;font-weight:700;font-size:52px;line-height:1.05;color:var(--verde)}
+.qp .q{font-family:"Space Grotesk",serif;font-weight:700;font-size:52px;line-height:1.05;color:var(--verde)}
 /* verbos */
 .verbs{display:flex;flex-wrap:wrap;gap:16px;max-width:900px;margin-top:8px}
 .verbs span{background:var(--coral);color:#fff;font-weight:700;font-size:36px;padding:12px 22px;border-radius:8px}
-.annot{font-family:"Fraunces",serif;font-style:italic;font-weight:600;font-size:44px;color:var(--coral);align-self:flex-end;margin:20px 30px -4px 0}
+.annot{font-family:"Space Grotesk",serif;font-style:italic;font-weight:600;font-size:44px;color:var(--coral);align-self:flex-end;margin:20px 30px -4px 0}
 /* cover foto — estilo grilla: número + título serif + etiqueta + subrayado coral */
 .cover{padding:0}
 .cover .photo{position:absolute;inset:0;background-size:cover;background-position:center 20%}
 .cover .grad{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,36,29,.28) 0%,rgba(20,36,29,0) 34%,rgba(18,32,25,.55) 60%,rgba(12,22,17,.94) 100%)}
 .cover .block{position:absolute;left:90px;right:90px;bottom:120px;z-index:5}
-.cover .cnum{font-family:"Fraunces",serif;font-weight:900;font-size:70px;line-height:.8;color:var(--coral)}
-.cover .ctitle{font-family:"Fraunces",serif;font-weight:900;font-size:100px;line-height:1.0;letter-spacing:-.02em;color:#fff;margin-top:18px}
+.cover .cnum{font-family:"Space Grotesk",serif;font-weight:700;font-size:70px;line-height:.8;color:var(--coral)}
+.cover .ctitle{font-family:"Space Grotesk",serif;font-weight:700;font-size:100px;line-height:1.0;letter-spacing:-.02em;color:#fff;margin-top:18px}
 .cover .clabel{font-family:"Archivo",sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.24em;font-size:30px;color:#eef2ee;margin-top:30px}
 .cover .cbar{width:96px;height:7px;background:var(--coral);border-radius:4px;margin-top:18px}
 .cover .wm{color:#fff}.cover .wm b{color:var(--coral)}
@@ -289,8 +290,7 @@ function docFor(post){
   const n = post.slides.length;
   const boards = post.slides.map((s,idx)=>slideHTML(s, idx+1, n)).join('\n');
   return `<!doctype html><html lang="es"><head><meta charset="utf-8">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,900&family=Archivo:wght@400;600;700;800&display=swap">
+  <style>${FONTS}</style>
   <style>${CSS}</style></head><body>${boards}</body></html>`;
 }
 
@@ -313,8 +313,17 @@ function captionFile(p){
     fs.writeFileSync(tmp, docFor(p));
     await page.goto('file://' + tmp, {waitUntil:'load'});
     try{ await page.waitForLoadState('networkidle',{timeout:8000}); }catch(e){}
-    try{ await page.evaluate(()=>document.fonts.ready); }catch(e){}
-    await page.waitForTimeout(400);
+    try{ await page.evaluate(async()=>{
+      await Promise.all([
+        document.fonts.load('700 100px "Space Grotesk"'),
+        document.fonts.load('500 40px "Space Grotesk"'),
+        document.fonts.load('800 40px "Archivo"'),
+        document.fonts.load('700 40px "Archivo"'),
+        document.fonts.load('600 40px "Archivo"')
+      ]);
+      await document.fonts.ready;
+    }); }catch(e){}
+    await page.waitForTimeout(500);
     const boards = await page.$$('.board');
     for(let i=0;i<boards.length;i++){
       const name = p.fmt==='Reel' ? 'cover.png' : `slide_${i+1}.png`;
